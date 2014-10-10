@@ -1,0 +1,27 @@
+{
+  "lib": {
+    "name": "bower-rails generated lib assets",
+    "dependencies": {
+      "angular": "1.2.16",
+      "json3": "~3.3.1",
+      "es5-shim": "~3.1.0",
+      "bootstrap-sass-official": "~3.2.0",
+      "angular-resource": "1.2.16",
+      "angular-cookies": "1.2.16",
+      "angular-sanitize": "1.2.16",
+      "angular-animate": "1.2.16",
+      "angular-touch": "1.2.16",
+      "angular-route": "1.2.16",
+      "angular-social": "~0.1.1",
+      "angular-scroll": "~0.6.2"
+      // "threex"      : "git@github.com:rharriso/threex.git",
+      // "gsvpano.js"  : "https://github.com/rharriso/GSVPano.js/blob/master/src/GSVPano.js"
+    }
+  },
+  "vendor": {
+    "name": "bower-rails generated vendor assets",
+    "dependencies": {
+      // "three.js"    : "https://raw.github.com/mrdoob/three.js/master/build/three.js"
+    }
+  }
+}

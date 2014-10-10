@@ -1,1 +1,5 @@
-var app = angular.module('SSDemoApp', ['ngResource']);
+var app = angular.module('SSDemoApp', [
+  'ngResource',
+  'ngRoute',
+  'templates'
+]);

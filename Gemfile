@@ -39,3 +39,5 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'angularjs-rails'
+gem 'bower-rails', '~> 0.8.3'
+gem 'angular-rails-templates'
