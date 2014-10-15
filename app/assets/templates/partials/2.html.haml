@@ -1,0 +1,17 @@
+.page.whitesmoke
+  .text-center(ng-model="questions")
+    %h1.blackshade-text.demo-bold-text Donating
+    %h4.blackshade-text
+      {{ questions[1] }}
+    .option-container
+      %label.whiteshade-text.round-btn.white(for="no" ng-click="go('/3')")
+        %input(type="radio" id="no" ng-model="feedback.second" value="No")
+        No
+
+      %label.white-text.round-btn.blue(for="yes" ng-click="go('/3')")
+        %input(type="radio" id="yes" ng-model="feedback.second" value="Yes")
+        Yes
+
+
+
+

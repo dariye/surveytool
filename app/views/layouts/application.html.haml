@@ -1,0 +1,33 @@
+!!! 5
+%html(ng-app="SSDemoApp")
+  %head
+    %title Demo Tool
+    = stylesheet_link_tag    :application, media: 'all'
+    = javascript_include_tag :application
+    = csrf_meta_tags
+  %body
+    %header#demo-header
+      .navbar.demo-navbar.navbar-fixed-top{ :role => "navigation" }
+        .container-fluid
+          .navbar-header
+            %p.navbar-brand
+              %a.demo-logo{:href => "/" }
+          .collapse.navbar-collapse(ng-controller="NavigationCtrl")
+            %ul.nav.navbar-nav.pull-right
+              %li.blackshade-text WEDIDIT Self Service Demo
+              %li{ :title => "Survey" }
+                %span.indicator(ng-click="go('/1')" ng-class="{active:isActive('/1')}")
+              %li{ :title => "Survey" }
+                %span.indicator(ng-click= "go('/2')" ng-class="{active: isActive('/2')}")
+              %li{ :title => "Survey" }
+                %span.indicator(ng-click="go('/3')" ng-class="{active: isActive('/3')}")
+              %li{ :title => "Peer Campaign" }
+                %span.indicator(ng-click="go('/4')" ng-class="{active:isActive('/4')}")
+              %li{ :title => "Mobile Fundraising" }
+                %span.indicator(ng-click="go('/5')" ng-class="{active:isActive('/5')}")
+              %li{ :title => "Donor Insights"}
+                %span.indicator(ng-click="go('/6')" ng-class="{active:isActive('/6')}")
+              %li{ :title => "Share" }
+                %span.indicator(ng-class="{active:isActive('/end')}")
+
+    = yield

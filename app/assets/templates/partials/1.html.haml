@@ -1,0 +1,17 @@
+.page.lighter-blue
+  .text-center(ng-model="questions")
+    %h1.demo-bold-txt Let's Get Started.
+    %h4
+      {{ questions[0] }}
+    %option-container
+      %label.blackshade-text.round-btn.yellow(for="no" ng-click="go('/2')")
+        %input(type="radio" id="no" ng-model="feedback.first" value="No")
+        No
+
+      %label.white-text.round-btn.light-blue(for="yes" ng-click="go('/2')")
+        %input(type="radio" id="yes" ng-model="feedback.first" value="Yes")
+        Yes
+
+
+
+

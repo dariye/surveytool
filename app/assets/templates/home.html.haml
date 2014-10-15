@@ -1,0 +1,13 @@
+.page.whitesmoke
+  %h1.blackshade-text Home
+  %div(ng-controller="UserCtrl")
+    %form( class="form-group" ng-submit="createUser()")
+      %input(class="form-group" type="text" ng-model='newUserFullname' placeholder="Enter Full Name")
+      %input(class="form-group" type="email" ng-model="newUserEmail" placeholder="Enter your Email")
+      %input.blackshade-text(class="form-group" type="submit" value="Add")
+
+    %ul
+      %li.blackshade-text(ng-repeat="user in users")
+        {{user.firstname}}, {{user.email}}
+        %a(href="" ng-click="deleteUser(user.id, $index)") Remove
+

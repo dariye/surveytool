@@ -1,0 +1,50 @@
+.page
+  .demo-section.blue(ng-style="resizePageContainer()" resize)
+    .center-block.text-center
+      %span.icon-coin-bank
+      %h1
+        %span.demo-bold-txt WEDIDIT INSIGHTS
+        %br/
+        Increase Donations &
+        %br/
+        Decrease Spending
+      %h4
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque chaere, municipem potuimus facimus intellegere diuturnitatem meam erimus ignavia cognitionis momenti, placeat diligant theophrasti capti athenis populo videtis quas persius, detracto.
+  .demo-section.whitesmoke(ng-style="resizePageContainer()" resize)
+    %a.arrow-wrap.text-center
+      %span.glyphicon.glyphicon-chevron-down.arrow
+    .center-block.text-center
+      = image_tag "donorprospecting.png", :alt => "WEDIDIT Insights"
+  .demo-section.yellow(ng-style="resizePageContainer()" resize)
+    .center-block.text-center
+      .col-md-7
+        = image_tag "targetedreach.png", :class => "img-responsive", :alt => "Targeted Fundraising"
+      .col-md-5
+        %h1.demo-bold-txt Targeted Online Fundraising
+        %h4 Lorem.Fortibus.Dissensio.
+  .demo-section.whitesmoke(ng-style="resizePageContainer()" resize)
+    .center-block.text-center
+      .col-md-8
+        = image_tag "donorpagesample.png", :class => "img-responsive", :alt => "Donor Page Insights"
+      .col-md-4
+        %h1.demo-bold-txt.blackshade-text
+          We'll Do The
+          %br/
+          Work For You
+        %h4.blackshade-text Lorem.Fortibus.Dissensio.
+      %a.demo-btn.blackshade.white-text(ng-click="optsIn = !optsIn" ng-show="!optsIn") Send Me More Info
+      .col-md-4.col-md-offset-4(ng-controller="UserCtrl" ng-show="optsIn")
+        %form(ng-submit="createUser()")
+
+          .form-group(ng-class="{ 'has-error' : newUserFullname.$invalid && !newUserFullname.$pristine }")
+            %input.form-control(type="text" placeholder="Enter Full Name" name="name" ng-model="newUserFullname" required)
+            %p.help-block(ng-show="newUserFullname.$invalid && !newUserFullname.$pristine") Your name is required.
+
+          .form-group(ng-class="{ 'has-error' : newUserEmail.$invalid && !newUserEmail.$pristine }")
+            %input.form-control(type="email" placeholder="Email" name="email" ng-model="newUserEmail" required)
+            %p.help-block(ng-show="newUserEmail.$invalid && !newUserEmail.$pristine") Enter a valid email.
+
+          .form-group
+            %input.btn.btn-success(type="submit" value="Send Me Info")
+
+

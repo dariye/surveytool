@@ -1,0 +1,15 @@
+.page.green
+  .text-center(ng-model="questions")
+    %h1.demo-bold-txt Lorem.Habuit.Suo.
+    %h4
+      {{ questions[2] }}
+    .option-container
+      %label.blackshade-text.round-btn.yellow(for="no" ng-click="go('/4')")
+        %input(type="radio" id="no" ng-model="feedback.third" value="No")
+        No
+      %label.white-text.round-btn.light-green(for="yes" ng-click="go('/4')")
+        %input(type="radio" id="yes" ng-model="feedback.third" value="Yes")
+        Yes
+
+
+

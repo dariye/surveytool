@@ -1,0 +1,107 @@
+/*#slide-views.ng-enter,
+#slide-views.ng-leave {
+    position:absolute;
+    left:30px;
+    right:30px;
+    transition:0.5s all ease;
+    -moz-transition:0.5s all ease;
+    -webkit-transition:0.5s all ease;
+}
+*/
+/* enter animation */
+.page.ng-enter            {
+    -webkit-animation:slideInRight 0.5s both ease;
+    -moz-animation:slideInRight 0.5s both ease;
+    animation:slideInRight 0.5s both ease;
+}
+
+/* leave animation */
+.page.ng-leave            {
+    -webkit-animation:slideOutLeft 0.5s both ease;
+    -moz-animation:slideOutLeft 0.5s both ease;
+    animation:slideOutLeft 0.5s both ease;
+}
+
+/* ANIMATIONS
+============================================================================= */
+/* slide out to the left */
+@keyframes slideOutLeft {
+    to      { transform: translateX(-200%); }
+}
+@-moz-keyframes slideOutLeft {
+    to      { -moz-transform: translateX(-200%); }
+}
+@-webkit-keyframes slideOutLeft {
+    to      { -webkit-transform: translateX(-200%); }
+}
+
+
+/* slide in from the right */
+
+@keyframes slideInRight {
+    from    { transform:translateX(200%); }
+    to      { transform: translateX(0); }
+}
+@-moz-keyframes slideInRight {
+    from    { -moz-transform:translateX(200%); }
+    to      { -moz-transform: translateX(0); }
+}
+@-webkit-keyframes slideInRight {
+    from    { -webkit-transform:translateX(200%); }
+    to      { -webkit-transform: translateX(0); }
+}
+
+
+
+/* Slide Animations */
+#slide-views.ng-enter,
+#slide-views.ng-leave {
+    position:absolute;
+    left:30px;
+    right:30px;
+    transition:0.5s all ease;
+    -moz-transition:0.5s all ease;
+    -webkit-transition:0.5s all ease;
+}
+
+/* enter animation */
+#slide-views.ng-enter            {
+    -webkit-animation:slideInDown 0.5s both ease;
+    -moz-animation:slideInDown 0.5s both ease;
+    animation:slideInDown 0.5s both ease;
+}
+
+/* leave animation */
+#slide-views.ng-leave            {
+    -webkit-animation:slideOutUp 0.5s both ease;
+    -moz-animation:slideOutUp 0.5s both ease;
+    animation:slideOutUp 0.5s both ease;
+}
+
+/* ANIMATIONS
+============================================================================= */
+/* slide out to the Up */
+@keyframes slideOutUp {
+    to      { transform: translateY(-200%); }
+}
+@-moz-keyframes slideOutUp {
+    to      { -moz-transform: translateY(-200%); }
+}
+@-webkit-keyframes slideOutUp {
+    to      { -webkit-transform: translateY(-200%); }
+}
+
+/* slide in from the Down */
+
+@keyframes slideInDown {
+    from    { transform:translateY(200%); }
+    to      { transform: translateY(0); }
+}
+@-moz-keyframes slideInDown {
+    from    { -moz-transform:translateY(200%); }
+    to      { -moz-transform: translateY(0); }
+}
+@-webkit-keyframes slideInDown {
+    from    { -webkit-transform:translateY(200%); }
+    to      { -webkit-transform: translateY(0); }
+}
