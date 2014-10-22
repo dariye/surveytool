@@ -1,6 +1,6 @@
 class ProductOwnerMailer < ActionMailer::Base
-  default from: "paul.dariye@gmail.com"
-  PO_EMAIL = "paul.dariye@gmail.com"
+  default from: ENV['po_email']
+  PO_EMAIL = ENV['po_email']
 
   def prospect_email(user)
     @user = user
