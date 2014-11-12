@@ -1,16 +1,19 @@
 .page.whitesmoke
-  .text-center(ng-model="questions")
+  .text-center
     %h1.blackshade-text.demo-bold-text Donating
-    %h4.blackshade-text
+    %h4.blackshade-text(ng-model="questions")
       {{ questions[1] }}
-    .option-container
-      %label.whiteshade-text.round-btn.white(for="no" ng-click="go('/3')")
-        %input(type="radio" id="no" ng-model="feedback.second" value="No")
-        No
+    %div(ng-controller="UserCtrl")
+      %ng-form
+        .option-container
+          %label.whiteshade-text.round-btn.white(for="no" ng-click="submitAnswer('demo.three')")
+            No
+          %input(type="radio" id="no" ng-model="formData.q2" value="No" checked)
 
-      %label.white-text.round-btn.blue(for="yes" ng-click="go('/3')")
-        %input(type="radio" id="yes" ng-model="feedback.second" value="Yes")
-        Yes
+          %label.white-text.round-btn.blue(for="yes" ng-click="submitAnswer('demo.three')")
+            Yes
+          %input(type="radio" id="yes" ng-model="formData.q2" value="Yes")
+
 
 
 

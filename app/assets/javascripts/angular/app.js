@@ -1,51 +1,57 @@
-app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
-  $routeProvider
-    .when('/', {
-      templateUrl: 'home.html',
-      controller: 'UserCtrl'
-    })
-   .when('/1', {
-      templateUrl: 'partials/1.html',
-      controller: 'UserCtrl'
+'use strict';
 
+app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
+  $stateProvider
+    .state('home', {
+      url: '/dashboard',
+      templateUrl: 'home.html'
     })
-    .when('/2', {
-      templateUrl: 'partials/2.html',
-      controller: 'UserCtrl'
 
-    })
-    .when('/3', {
-      templateUrl: 'partials/3.html',
-      controller: 'UserCtrl'
-
-    })
-    .when('/4', {
-      templateUrl: 'partials/4.html',
-      controller: 'UserCtrl'
-
-    })
-    .when('/5', {
-      templateUrl: 'partials/5.html',
-      controller: 'UserCtrl'
-
-    })
-    .when('/6', {
-      templateUrl: 'partials/6.html',
-      controller: 'UserCtrl'
-
-    })
-    .when('/end', {
-      templateUrl: 'partials/end.html',
+    .state('demo', {
+      url: '/demo',
+      abstract: true,
+      templateUrl: 'demo.html',
       controller: 'UserCtrl'
     })
-    .otherwise({redirectTo: '/1'});
+    .state('demo.one', {
+      url: '',
+      templateUrl: 'partials/1.html'
+    })
+    .state('demo.two', {
+      url: '',
+      templateUrl: 'partials/2.html'
+    })
+    .state('demo.three', {
+      url: '',
+      templateUrl: 'partials/3.html'
+    })
+    .state('demo.four', {
+      url: '',
+      templateUrl: 'partials/4.html'
+    })
+    .state('demo.five', {
+      url: '',
+      templateUrl: 'partials/5.html'
+    })
+    .state('demo.six', {
+      url: '',
+      templateUrl: 'partials/6.html'
+    })
+    .state('demo.end', {
+      url: '',
+      templateUrl: 'partials/end.html'
+    });
 
-  $locationProvider.html5Mode(true);
+    // default fall back route
+    $urlRouterProvider.otherwise('/demo');
+
+    // enable HTML5 Mode for SEO
+    $locationProvider.html5Mode(true);
 }]);
 
 
-app.run(['$rootScope', '$location', '$window', '$timeout',
-  function ($rootScope, $location, $window, $timeout) {
+app.run(['$rootScope', '$stateParams', '$state', '$location', '$window', '$timeout',
+  function ($rootScope, $stateParams, $state, $location, $window, $timeout) {
     // $rootScope.$state = $state;
     // $rootScope.$stateParams = $stateParams;
 
@@ -75,8 +81,8 @@ app.run(['$rootScope', '$location', '$window', '$timeout',
     $rootScope.counter = 0;
 
     // Change routes
-    $rootScope.go = function (path) {
-      $location.path(path);
+    $rootScope.go = function (state) {
+      $state.go(state);
     };
 
     // Page Resize

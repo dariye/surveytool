@@ -1,16 +1,20 @@
 .page.lighter-blue
-  .text-center(ng-model="questions")
+  .text-center
     %h1.demo-bold-txt Let's Get Started.
-    %h4
+    %h4(ng-model="questions")
       {{ questions[0] }}
-    %option-container
-      %label.blackshade-text.round-btn.yellow(for="no" ng-click="go('/2')")
-        %input(type="radio" id="no" ng-model="feedback.first" value="No")
-        No
 
-      %label.white-text.round-btn.light-blue(for="yes" ng-click="go('/2')")
-        %input(type="radio" id="yes" ng-model="feedback.first" value="Yes")
-        Yes
+    %div(ng-controller="UserCtrl")
+      %ng-form
+        %option-container
+          %label.blackshade-text.round-btn.yellow(for="no"  ng-click="submitAnswer('demo.two')")
+            No
+          %input(type="radio" ng-model="formData.q1" id="no" value="No" checked)
+
+          %label.white-text.round-btn.light-blue(for="yes" ng-click="submitAnswer('demo.two')")
+            Yes
+          %input(type="radio" ng-model="formData.q1" id="yes" value="Yes")
+
 
 
 

@@ -1,3 +1,5 @@
+'use strict';
+
 app.factory('Questions', [function () {
 
   var questionList =

@@ -1,3 +1,5 @@
+'use strict';
+
 app.factory('User', [ '$resource', function ($resource) {
   function User() {
     this.service = $resource('/api/users/:userId', {userId: '@id'});

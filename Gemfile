@@ -19,10 +19,19 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'haml'
 gem "haml-rails"
 
+gem 'bourbon'
+
 # Customerio
 
 gem 'customerio', :git => 'https://github.com/customerio/customerio-ruby'
 
 # Figaro
-
 gem 'figaro'
+
+#Serialize to json
+gem 'serialize-rails'
+
+group :development do
+  gem 'pry'
+  gem 'pry-byebug'
+end

@@ -11,12 +11,12 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
 //= require angular
 //= require angular-animate
 //= require angular-resource
 //= require angular-route
 //= require angular-social
+//= require angular-ui-router
 //= require angular-rails-templates
 //= require main.js
 //= require_tree ./angular

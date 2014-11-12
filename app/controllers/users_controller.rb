@@ -13,9 +13,10 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    respond_with @user if @user.save
-    # respond_with User.create(user_params)
-    ProductOwnerMailer.prospect_email(@user).deliver
+    if @user.save
+      respond_with @user
+      ProductOwnerMailer.prospect_email(@user).deliver
+    end
   end
 
   def destroy
@@ -24,6 +25,6 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:firstname, :lastname, :email, :feedback)
+      params.require(:user).permit(:firstname, :lastname, :email, :response)
     end
 end

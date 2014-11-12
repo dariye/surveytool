@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
-  # serialize :feedback
+  serialize :response
+
+
   after_create :customerio_identify
 
   def customerio_identify

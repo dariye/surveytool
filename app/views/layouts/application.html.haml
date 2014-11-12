@@ -1,11 +1,12 @@
 !!! 5
-%html(ng-app="SSDemoApp")
+%html
   %head
     %title Demo Tool
     = stylesheet_link_tag    :application, media: 'all'
     = javascript_include_tag :application
     = csrf_meta_tags
-  %body
+
+  %body(ng-app="SSDemoApp")
     %header#demo-header
       .navbar.demo-navbar.navbar-fixed-top{ :role => "navigation" }
         .container-fluid
@@ -16,18 +17,19 @@
             %ul.nav.navbar-nav.pull-right
               %li.blackshade-text WEDIDIT Self Service Demo
               %li{ :title => "Survey" }
-                %span.indicator(ng-click="go('/1')" ng-class="{active:isActive('/1')}")
+                %span.indicator(ng-click="go('demo.one')" ng-class="{active:isActive('demo.one')}")
               %li{ :title => "Survey" }
-                %span.indicator(ng-click= "go('/2')" ng-class="{active: isActive('/2')}")
+                %span.indicator(ng-click= "go('demo.two')" ng-class="{active: isActive('demo.two')}")
               %li{ :title => "Survey" }
-                %span.indicator(ng-click="go('/3')" ng-class="{active: isActive('/3')}")
+                %span.indicator(ng-click="go('demo.three')" ng-class="{active: isActive('demo.three')}")
               %li{ :title => "Peer Campaign" }
-                %span.indicator(ng-click="go('/4')" ng-class="{active:isActive('/4')}")
+                %span.indicator(ng-click="go('demo.four')" ng-class="{active:isActive('demo.four')}")
               %li{ :title => "Mobile Fundraising" }
-                %span.indicator(ng-click="go('/5')" ng-class="{active:isActive('/5')}")
+                %span.indicator(ng-click="go('demo.five')" ng-class="{active:isActive('demo.five')}")
               %li{ :title => "Donor Insights"}
-                %span.indicator(ng-click="go('/6')" ng-class="{active:isActive('/6')}")
+                %span.indicator(ng-click="go('demo.six')" ng-class="{active:isActive('demo.six')}")
               %li{ :title => "Share" }
-                %span.indicator(ng-class="{active:isActive('/end')}")
+                %span.indicator(ng-class="{active:isActive('demo.end')}")
 
-    = yield
+    #demo-page-container
+      = yield

@@ -1,7 +1,7 @@
 .page.whitesmoke
   %h1.blackshade-text Home
   %div(ng-controller="UserCtrl")
-    %form( class="form-group" ng-submit="createUser()")
+    %form(ng-submit="addSurveyResponse()")
       %input(class="form-group" type="text" ng-model='newUserFullname' placeholder="Enter Full Name")
       %input(class="form-group" type="email" ng-model="newUserEmail" placeholder="Enter your Email")
       %input.blackshade-text(class="form-group" type="submit" value="Add")

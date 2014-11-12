@@ -3,5 +3,6 @@ var app = angular.module('SSDemoApp', [
   'ngResource',
   'ngRoute',
   'ngSocial',
+  'ui.router',
   'templates'
 ]);
