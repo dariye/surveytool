@@ -31,7 +31,11 @@ gem 'figaro'
 #Serialize to json
 gem 'serialize-rails'
 
+gem 'nokogiri'
+gem 'premailer-rails'
+
 group :development do
   gem 'pry'
   gem 'pry-byebug'
+  gem 'letter_opener_web', '~> 1.2.0'
 end

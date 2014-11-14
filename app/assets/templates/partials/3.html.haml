@@ -3,17 +3,14 @@
     %h1.demo-bold-txt Lorem.Habuit.Suo.
     %h4(ng-model="questions")
       {{ questions[2] }}
+    .option-container
+      %label.blackshade-text.round-btn.yellow(for="no" ng-click="addResponse('demo.four','No')")
+        No
+      %input(type="radio" id="no" ng-model="answer" value="No")
 
-    %div(ng-controller="UserCtrl")
-      %ng-form
-        .option-container
-          %label.blackshade-text.round-btn.yellow(for="no" ng-click="submitAnswer('demo.four')")
-            No
-          %input(type="radio" id="no" ng-model="formData.q3" value="No" checked)
-
-          %label.white-text.round-btn.light-green(for="yes" ng-click="submitAnswer('demo.four')")
-            Yes
-          %input(type="radio" id="yes" ng-model="formData.q3" value="Yes")
+      %label.white-text.round-btn.light-green(for="yes" ng-click="addResponse('demo.four','Yes')")
+        Yes
+      %input(type="radio" id="yes" ng-model="answer" value="Yes")
 
 
 

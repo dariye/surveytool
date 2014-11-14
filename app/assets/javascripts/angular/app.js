@@ -4,42 +4,49 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
   $stateProvider
     .state('home', {
       url: '/dashboard',
-      templateUrl: 'home.html'
+      templateUrl: 'home.html',
+      controller: 'UserCtrl'
     })
 
     .state('demo', {
       url: '/demo',
       abstract: true,
       templateUrl: 'demo.html',
-      controller: 'UserCtrl'
     })
     .state('demo.one', {
       url: '',
-      templateUrl: 'partials/1.html'
+      templateUrl: 'partials/1.html',
+      controller: 'UserCtrl'
     })
     .state('demo.two', {
       url: '',
-      templateUrl: 'partials/2.html'
+      templateUrl: 'partials/2.html',
+      controller: 'UserCtrl'
     })
     .state('demo.three', {
       url: '',
-      templateUrl: 'partials/3.html'
+      templateUrl: 'partials/3.html',
+      controller: 'UserCtrl'
     })
     .state('demo.four', {
       url: '',
-      templateUrl: 'partials/4.html'
+      templateUrl: 'partials/4.html',
+      controller: 'UserCtrl'
     })
     .state('demo.five', {
       url: '',
-      templateUrl: 'partials/5.html'
+      templateUrl: 'partials/5.html',
+      controller: 'UserCtrl'
     })
     .state('demo.six', {
       url: '',
-      templateUrl: 'partials/6.html'
+      templateUrl: 'partials/6.html',
+      controller: 'UserCtrl'
     })
     .state('demo.end', {
       url: '',
-      templateUrl: 'partials/end.html'
+      templateUrl: 'partials/end.html',
+      controller: 'UserCtrl'
     });
 
     // default fall back route
@@ -52,24 +59,6 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
 
 app.run(['$rootScope', '$stateParams', '$state', '$location', '$window', '$timeout',
   function ($rootScope, $stateParams, $state, $location, $window, $timeout) {
-    // $rootScope.$state = $state;
-    // $rootScope.$stateParams = $stateParams;
-
-    // $rootScope.go = function (state, pageAnimationClass) {
-
-    //   $rootScope.pageAnimationClass = pageAnimationClass;
-
-    //   if (state === 'back' ) {
-    //     $window.history.back();
-    //   }
-    //   else if (state === 'forward') {
-    //     $window.history.forward();
-    //   }
-    //   else {
-    //     $state.go(state);
-    //   }
-    // };
-
     http://codepen.io/mike360/pen/xjFIJ
     $rootScope.$on('$routeChangeSuccess', function () {
       $timeout(function () {

@@ -3,17 +3,14 @@
     %h1.demo-bold-txt Let's Get Started.
     %h4(ng-model="questions")
       {{ questions[0] }}
+    %option-container(ng-init="answer")
+      %label.blackshade-text.round-btn.yellow(for="no"  ng-click="addResponse('demo.two','No')")
+        No
+      %input(type="radio" ng-model="answer" id="no" value="No" )
 
-    %div(ng-controller="UserCtrl")
-      %ng-form
-        %option-container
-          %label.blackshade-text.round-btn.yellow(for="no"  ng-click="submitAnswer('demo.two')")
-            No
-          %input(type="radio" ng-model="formData.q1" id="no" value="No" checked)
-
-          %label.white-text.round-btn.light-blue(for="yes" ng-click="submitAnswer('demo.two')")
-            Yes
-          %input(type="radio" ng-model="formData.q1" id="yes" value="Yes")
+      %label.white-text.round-btn.light-blue(for="yes" ng-click="addResponse('demo.two','Yes')")
+        Yes
+      %input(type="radio" ng-model="answer" id="yes" value="Yes")
 
 
 

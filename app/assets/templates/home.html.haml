@@ -1,13 +1,30 @@
-.page.whitesmoke
-  %h1.blackshade-text Home
-  %div(ng-controller="UserCtrl")
-    %form(ng-submit="addSurveyResponse()")
-      %input(class="form-group" type="text" ng-model='newUserFullname' placeholder="Enter Full Name")
-      %input(class="form-group" type="email" ng-model="newUserEmail" placeholder="Enter your Email")
-      %input.blackshade-text(class="form-group" type="submit" value="Add")
+.container
+  .row
+    .col-md-12
+      .centered
+        %h1.blackshade-text
+          Survey Responses
+      %div.table-responsive
+        %table.table.table-hover
+          %thead
+            %tr
+              %th Name
+              %th Email
+          %tbody(ng-repeat="user in users")
+            %tr(ng-click="showMore = !showMore")
+              %td
+                {{ user.firstname + ' ' + user.lastname }}
+              %td
+                {{ user.email }}
 
-    %ul
-      %li.blackshade-text(ng-repeat="user in users")
-        {{user.firstname}}, {{user.email}}
-        %a(href="" ng-click="deleteUser(user.id, $index)") Remove
+            %tr(ng-show="showMore")
+              %td(colspan="2")
+                %ul
+                  %li(ng-repeat='response in user.response track by $index' class="list-unstyled")
+                    {{ response['question'] }}
+                    %strong
+                      {{ response['answer'] }}
+
+
+/ %a(href="" ng-click="deleteUser(user.id, $index)") Remove
 

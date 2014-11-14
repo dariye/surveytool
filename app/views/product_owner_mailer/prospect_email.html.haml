@@ -1,29 +1,33 @@
 !!! 5
-
 %html
   %head
     %meta(content='text/html; charset=UTF-8' http-equiv='Content-Type')/
+    = stylesheet_link_tag    :application, media: 'all'
 
   %body
-    %h1
-      = @user.firstname
-      would like to know more about WeDidIt!
-
-    %h2
-      Prospect Report:
-    %dl
-      %dt
-        Full Name:
-        = @user.firstname + @user.lastname
-      %dt
-        Email:
-        = @user.email
-      %dt
-        Question: Question 1
-        %dd Answer: Anwer 1
-      %dt
-        Question: Question 2
-        %dd Answer: Answer 2
-      %dt
-        Question: Question 3
-        %dd Answer: Answer 3
+    .container
+      .row
+        .col-md-12
+          .centered
+            %h2
+              Prospect Report
+          %div.table-responsive
+            %table.table.table-hover
+              %thead
+                %tr
+                  %th Name
+                  %th Email
+              %tbody
+                %tr
+                  %td
+                    = @user.firstname + ' ' + @user.lastname
+                  %td
+                    = @user.email
+                %tr
+                  %td(colspan="2")
+                    %ul.list-unstyled
+                      - @user.response.each do |r|
+                        %li
+                          = r['question']
+                          %strong
+                            = r['answer']

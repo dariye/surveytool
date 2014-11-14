@@ -1,20 +1,34 @@
 'use strict';
 
-app.controller('UserCtrl', ['$scope', '$location', 'User', 'Questions', '$rootScope', 'UserResponse',
-  function ($scope, $location, User, Questions, $rootScope, UserResponse) {
+app.controller('UserCtrl', ['$scope', '$location', 'User', 'Questions', '$rootScope', 'responses',
+  function ($scope, $location, User, Questions, $rootScope, responses) {
 
     // Pre-defined Questions
     $scope.questions = Questions;
 
-    $scope.formData = {};
+    $scope.responses = responses.responses;
 
+    $scope.answer = '';
 
-    $scope.submitAnswer = function (state) {
+    var qNo = $rootScope.counter;
+
+    $scope.addResponse = function (state, answer) {
+
+      console.log('scope answer is:', $scope.answer);
+
+      $scope.responses.push({
+        question: $scope.questions[qNo],
+        answer: answer
+      });
+
+      $rootScope.counter += 1;
 
       $rootScope.go(state);
 
     };
 
+
+    console.log($scope.responses);
 
     $scope.users = User.all();
 
@@ -25,7 +39,7 @@ app.controller('UserCtrl', ['$scope', '$location', 'User', 'Questions', '$rootSc
       attr.lastname = $scope.lastname;
       attr.email = $scope.email;
 
-      attr.response = $scope.formData;
+      attr.response = $scope.responses;
 
       console.log(attr);
 

@@ -1,12 +1,11 @@
 'use strict';
 
-app.factory('UserResponse', [function () {
+app.factory('responses', [function () {
 
-  var response = [];
-
-  response.addEntry = function (data) {
-    response.push(data);
+  var r = {
+    responses: []
   };
 
-  return response;
+
+  return r;
 }]);
