@@ -44,3 +44,7 @@ group :development do
   gem 'pry-byebug'
   gem 'letter_opener_web', '~> 1.2.0'
 end
+
+group :assets do
+  gem 'coffee-rails'
+end

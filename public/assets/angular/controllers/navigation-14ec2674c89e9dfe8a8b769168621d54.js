@@ -1,0 +1,1 @@
+"use strict";app.controller("NavigationCtrl",["$scope","$state","$location",function($scope,$state){$scope.isActive=function(state){return $state.includes(state)}}]);
