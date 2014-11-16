@@ -13,18 +13,13 @@ app.controller('UserCtrl', ['$scope', '$location', 'User', 'Questions', '$rootSc
     var qNo = $rootScope.counter;
 
     $scope.addResponse = function (state, answer) {
-
-      console.log('scope answer is:', $scope.answer);
-
       $scope.responses.push({
         question: $scope.questions[qNo],
         answer: answer
       });
 
       $rootScope.counter += 1;
-
       $rootScope.go(state);
-
     };
 
 
@@ -33,6 +28,11 @@ app.controller('UserCtrl', ['$scope', '$location', 'User', 'Questions', '$rootSc
     $scope.users = User.all();
 
     $scope.submitResponse = function () {
+
+      if ($scope.firstname == '' || $scope.email == '') {
+        return;
+      }
+
       var attr = {};
 
       attr.firstname = $scope.firstname;

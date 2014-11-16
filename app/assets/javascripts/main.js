@@ -4,5 +4,7 @@ var app = angular.module('SSDemoApp', [
   'ngRoute',
   'ngSocial',
   'ui.router',
+  'ngSocial',
+  'duScroll',
   'templates'
 ]);

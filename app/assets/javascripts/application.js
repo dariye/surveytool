@@ -17,6 +17,8 @@
 //= require angular-route
 //= require angular-social
 //= require angular-ui-router
+//= require angular-scroll
+//= require angular-social
 //= require angular-rails-templates
 //= require main.js
 //= require_tree ./angular

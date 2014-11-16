@@ -60,10 +60,11 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
 app.run(['$rootScope', '$stateParams', '$state', '$location', '$window', '$timeout',
   function ($rootScope, $stateParams, $state, $location, $window, $timeout) {
     http://codepen.io/mike360/pen/xjFIJ
+
     $rootScope.$on('$routeChangeSuccess', function () {
       $timeout(function () {
         $window.scrollTo(0,0);
-      }, 500);
+      }, 250);
     });
 
     // Global counter

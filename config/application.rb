@@ -21,5 +21,6 @@ module Surveytool
     # config.i18n.default_locale = :de
     config.assets.paths << Rails.root.join("lib","assets","bower_components","bootstrap-sass-official", "assets", "stylesheets")
     config.assets.paths << Rails.root.join("lib","assets","bower_components","bootstrap-sass-official", "assets","fonts")
+    config.assets.paths << Rails.root.join("lib","assets","angular-social")
   end
 end

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   root 'demo#index'
 
+  get "*path.html" => "demo#index", :layout => 0
+
   get '/*path' => 'demo#index'
 
   # Letter Opener
