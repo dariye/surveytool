@@ -4,6 +4,7 @@ class ProductOwnerMailer < ActionMailer::Base
 
   def prospect_email(user)
     @user = user
+    @url = 'http://www.wedid.it'
     mail(to: PO_EMAIL, subject: 'New Prospect')
   end
 
