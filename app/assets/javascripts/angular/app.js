@@ -64,7 +64,7 @@ app.run(['$rootScope', '$stateParams', '$state', '$location', '$window', '$timeo
     $rootScope.$on('$routeChangeSuccess', function () {
       $timeout(function () {
         $window.scrollTo(0,0);
-      }, 250);
+      }, 1000);
     });
 
     // Global counter
@@ -87,6 +87,13 @@ app.run(['$rootScope', '$stateParams', '$state', '$location', '$window', '$timeo
     angular.element($window).bind('getHeight', function() {
       $rootScope.$apply();
     });
+
+    // Progress tracker
+    $rootScope.progressTracker = [];
+
+
+
+
 
 
 }]);
