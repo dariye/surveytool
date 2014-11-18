@@ -1,0 +1,72 @@
+/* line 1, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/animation.css.scss */
+#demo-page-container {
+  position: relative;
+}
+
+/* line 5, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/animation.css.scss */
+#page-view {
+  width: auto;
+  /* basic styling for entering and leaving */
+  /* left and right added to ensure full width */
+  /* enter animation */
+  /* leave animation */
+}
+/* line 11, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/animation.css.scss */
+#page-view.ng-enter, #page-view.ng-leave {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+/* line 22, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/animation.css.scss */
+#page-view.ng-enter {
+  -webkit-animation: slideInRight 0.5s both ease-in-out;
+  animation: slideInRight 0.5s both ease-in-out;
+}
+/* line 29, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/animation.css.scss */
+#page-view.ng-leave {
+  -webkit-animation: slideOutLeft 0.5s both ease-in-out;
+  animation: slideOutLeft 0.5s both ease-in-out;
+}
+
+@-webkit-keyframes slideOutLeft {
+  /* line 41, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/animation.css.scss */
+  to {
+    -webkit-transform: translateX(-200%);
+  }
+}
+
+@keyframes slideOutLeft {
+  /* line 47, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/animation.css.scss */
+  to {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
+}
+
+@-webkit-keyframes slideInRight {
+  /* line 52, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/animation.css.scss */
+  from {
+    -webkit-transform: translateX(200%);
+  }
+
+  /* line 53, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/animation.css.scss */
+  to {
+    -webkit-transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  /* line 60, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/animation.css.scss */
+  from {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+
+  /* line 61, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/animation.css.scss */
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}

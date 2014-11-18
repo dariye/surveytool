@@ -1,0 +1,442 @@
+/* line 1, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+/* line 7, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+*:before, *:after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 14, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+html, body {
+  min-height: 100%;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/*TODO: cross-browser compatibility
+this works for just chrome and safari
+*/
+/* line 25, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* line 40, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+#demo-header {
+  background-color: #fff !important;
+}
+/* line 42, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+#demo-header .navbar-header {
+  margin-left: 50px !important;
+}
+/* line 45, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+#demo-header .nav {
+  display: inherit;
+}
+/* line 47, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+#demo-header .nav li:nth-child(1) {
+  padding-top: 21px;
+  padding-right: 10px;
+}
+/* line 52, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+#demo-header ul {
+  border: 0;
+  margin: 0;
+  outline: 0;
+  vertical-align: baseline;
+  padding-right: 83px;
+  list-style: none;
+}
+/* line 57, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+#demo-header li {
+  border: 0;
+  margin: 0;
+  outline: 0;
+  vertical-align: baseline;
+  display: list-item;
+  text-align: -webkit-match-parent;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 21px;
+}
+
+/* line 69, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.demo-navbar {
+  background-color: #fff;
+}
+
+/* line 73, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.demo-logo {
+  background: url("/assets/wd_logo.png") no-repeat;
+  display: block;
+  padding-left: 20px;
+  height: 50px;
+  width: 150px;
+}
+
+/* line 81, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.demo-navbar-brand {
+  margin-left: 120px !important;
+}
+/* line 83, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.demo-navbar-brand p {
+  margin-bottom: 0 !important;
+}
+
+/* line 88, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.indicator {
+  border: 0;
+  margin: 0;
+  outline: 0;
+  vertical-align: baseline;
+  display: inline-block;
+  right: 1em;
+  padding: 0.3em;
+  background: #000;
+  border-radius: 50%;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.5s;
+          transition: opacity 0.5s;
+}
+/* line 98, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.indicator.active, .indicator:hover {
+  background-color: red;
+}
+
+/* line 104, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+#demo-page-container {
+  min-height: 100%;
+  height: auto;
+}
+
+/* line 109, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+#page-view {
+  position: absolute;
+  display: table;
+}
+
+/* line 114, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.page {
+  min-height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  font-family: 'GothamLight', serif;
+  color: #fff;
+}
+/* line 120, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.page h1 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+/* line 124, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.page h2 {
+  color: #fff;
+}
+/* line 127, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.page [class^="icon-"] {
+  font-size: 6em;
+}
+
+/* line 132, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.demo-section {
+  width: 100%;
+  padding: 15em 4em;
+  color: #fff;
+  position: relative;
+  display: table;
+}
+
+/* line 145, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.option-container {
+  margin-top: 40px;
+  height: 60px;
+  text-align: center;
+  position: relative;
+  font-family: 'GothamMedium', serif;
+  text-transform: uppercase;
+}
+/* line 152, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.option-container div:nth-child(1) {
+  left: 500px;
+}
+
+/* line 157, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+label {
+  vertical-align: middle;
+  font-family: 'GothamMedium', serif;
+  text-transform: uppercase;
+}
+
+/* line 163, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+input[type=radio] {
+  display: none;
+}
+/* line 165, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+input[type=radio] + label {
+  display: inline-block;
+}
+/* line 168, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+input[type=radio]:checked + label {
+  /* Darken */
+}
+
+/* line 173, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.round-btn {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 25px 0;
+  height: 3.5em;
+  width: 3.5em;
+  font-size: 1.8em;
+  cursor: pointer;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* line 187, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.round-btn a {
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 194, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+div.round-btn:hover {
+  font-size: 1.9em;
+  box-shadow: 0px 0px 10px #d9d9d9;
+}
+
+/* line 200, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.demo-btn {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 2em;
+  padding: 0.3em 2em;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  border-radius: 2px;
+}
+/* line 213, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.demo-btn:hover {
+  font-size: 1.93em;
+  box-shadow: 2px 2px 5px #000;
+}
+
+/* line 219, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.slides {
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+}
+
+/* line 225, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.centered {
+  position: relative;
+  bottom: 15%;
+  padding-top: 20px;
+}
+
+/* line 233, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.arrow-wrap {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: -5em;
+  margin-left: -5em;
+  background: #fbfcfe;
+  width: 10em;
+  height: 10em;
+  padding: 4em 2em;
+  border-radius: 50%;
+  font-size: 0.5em;
+  display: block;
+  opacity: 0.5;
+  box-shadow: 0px 0px 5px 2px #A0A0A0;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+/* line 251, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.arrow-wrap:hover {
+  font-size: 0.55em;
+}
+/* line 254, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.arrow-wrap .glyphicon {
+  font-size: 3em;
+  color: #00bcd7;
+}
+/* line 258, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.arrow-wrap .arrow {
+  -webkit-animation: arrows 2.8s 0.4s;
+  -webkit-animation-delay: 3s;
+}
+
+/* line 264, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.hint {
+  position: absolute;
+  top: 0.6em;
+  width: 100%;
+  left: 0;
+  font-size: 2em;
+  font-style: italic;
+  text-align: center;
+  color: #00bcd7;
+  opacity: 0;
+}
+/* line 274, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.hint:hover .hint {
+  opacity: 1;
+}
+
+@-webkit-keyframes arrows {
+  /* line 280, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+  0% {
+    top: 0;
+  }
+
+  /* line 281, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+  10% {
+    top: 12%;
+  }
+
+  /* line 282, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+  20% {
+    top: 0;
+  }
+
+  /* line 283, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+  30% {
+    top: 12%;
+  }
+
+  /* line 284, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+  40% {
+    top: -12%;
+  }
+
+  /* line 285, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+  50% {
+    top: 12%;
+  }
+
+  /* line 286, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+  60% {
+    top: 0;
+  }
+
+  /* line 287, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+  70% {
+    top: 12%;
+  }
+
+  /* line 288, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+  80% {
+    top: -12%;
+  }
+
+  /* line 289, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+  90% {
+    top: 12%;
+  }
+
+  /* line 290, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+  100% {
+    top: 0;
+  }
+}
+
+/* line 294, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.easing {
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+}
+
+/* UTILITY STYLES */
+/* line 303, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.whitesmoke {
+  background-color: #F1F5F8 !important;
+}
+
+/* line 304, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.green {
+  background-color: #2dcc70 !important;
+}
+
+/* line 305, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.light-green {
+  background-color: #6ddb9c !important;
+}
+
+/* line 306, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.cyan {
+  background-color: #36ddc1 !important;
+}
+
+/* line 307, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.blue {
+  background-color: #00adef !important;
+}
+
+/* line 308, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.lighter-blue {
+  background-color: #00BCD7 !important;
+}
+
+/* line 309, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.white {
+  background-color: #F9FAFC !important;
+}
+
+/* line 310, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.yellow {
+  background-color: #ffd545 !important;
+}
+
+/* line 311, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.light-blue {
+  background-color: #4DD0E2 !important;
+}
+
+/* line 312, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.blackshade {
+  background-color: #4f4f4f !important;
+}
+
+/* line 315, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.blackshade-text {
+  color: #50463d !important;
+}
+
+/* line 316, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.white-text {
+  color: #fff !important;
+}
+
+/* line 317, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.whiteshade-text {
+  color: #d4d5d7 !important;
+}
+
+/* line 318, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.black-text {
+  color: #000 !important;
+}
+
+/* line 319, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.blue-text {
+  color: #00adef !important;
+}
+
+/* line 322, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.demo-border-right {
+  border-right: 2px solid #b7bbbe;
+}
+
+/* line 327, /Users/pauldariye/wedidit/surveytool/app/assets/stylesheets/styles.css.scss.erb */
+.demo-bold-txt {
+  font-family: 'GothamBold';
+}
