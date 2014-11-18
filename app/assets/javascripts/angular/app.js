@@ -57,8 +57,8 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', functio
 }]);
 
 
-app.run(['$rootScope', '$stateParams', '$state', '$location', '$window', '$timeout',
-  function ($rootScope, $stateParams, $state, $location, $window, $timeout) {
+app.run(['$rootScope', '$stateParams', '$state', '$location', '$window', '$timeout', 'Questions',
+  function ($rootScope, $stateParams, $state, $location, $window, $timeout, Questions) {
     http://codepen.io/mike360/pen/xjFIJ
 
     $rootScope.$on('$routeChangeSuccess', function () {
@@ -72,7 +72,12 @@ app.run(['$rootScope', '$stateParams', '$state', '$location', '$window', '$timeo
 
     // Change routes
     $rootScope.go = function (state) {
-      $state.go(state);
+      if (($rootScope.progressTracker.indexOf(state) >= 0) && ($rootScope.progressTracker.indexOf(state) < Questions.length)) {
+        return;
+      }
+      else {
+        $state.go(state);
+      }
     };
 
     // Page Resize
@@ -90,10 +95,5 @@ app.run(['$rootScope', '$stateParams', '$state', '$location', '$window', '$timeo
 
     // Progress tracker
     $rootScope.progressTracker = [];
-
-
-
-
-
 
 }]);

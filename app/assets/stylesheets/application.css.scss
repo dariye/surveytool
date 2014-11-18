@@ -13,7 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
 @import "angular-social/angular-social.css";
-@import "bootstrap/bootstrap";
 @import "../fonts/fonts";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "animation";
+@import "styles";
+
 @import "bourbon";

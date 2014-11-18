@@ -6,5 +6,6 @@ var app = angular.module('SSDemoApp', [
   'ui.router',
   'ngSocial',
   'duScroll',
+  'ui.bootstrap.showErrors',
   'templates'
 ]);

@@ -10,7 +10,7 @@
         Decrease Spending
       %h4
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque chaere, municipem potuimus facimus intellegere diuturnitatem meam erimus ignavia cognitionis momenti, placeat diligant theophrasti capti athenis populo videtis quas persius, detracto.
-  .demo-section.whitesmoke(ng-style="resizePageContainer()" resize)
+  .demo-section.whitesmoke.section-pull-up(ng-style="resizePageContainer()" resize arrow)
     %a.arrow-wrap.text-center(href="#section-2" id="section-2" du-smooth-scroll)
       %span.glyphicon.glyphicon-chevron-down.arrow
     .center-block.text-center
@@ -36,19 +36,17 @@
       .col-md-6.col-md-offset-3
         %a.demo-btn.blackshade.white-text(ng-click="optsIn = !optsIn" ng-show="!optsIn") Send Me More Info
         %div(ng-show="optsIn")
-          .form-group(ng-class="{ 'has-error' : vFname }")
-            %input.form-control(type="text" placeholder="Enter First Name" name="name" ng-model="firstname" required)
-            %p.help-block(ng-show="vFname") Your First Name is required.
+          %form(name="userForm")
+            .form-group(show-errors="{ showSuccess: true }")
+              %input.form-control(type="text" placeholder="Enter First Name" name="firstname" ng-model="firstname" required)
 
-          .form-group(ng-class="{ 'has-error' : lastname.$invalid && !lastname.$pristine }")
-            %input.form-control(type="text" placeholder="Enter Last Name" name="name" ng-model="lastname" required)
-            %p.help-block(ng-show="lastname.$invalid && !lastname.$pristine") Your Last Name is required.
+            .form-group(show-errors="{ showSuccess: true }")
+              %input.form-control(type="text" placeholder="Enter Last Name" name="name" ng-model="lastname")
 
-          .form-group(ng-class="{ 'has-error' : vEmail }")
-            %input.form-control(type="email" placeholder="Email" name="email" ng-model="email" required)
-            %p.help-block(ng-show="vEmail") Enter a valid email.
+            .form-group(show-errors="{ showSuccess: true }")
+              %input.form-control(type="email" placeholder="Email" name="email" ng-model="email" required)
 
-          .form-group
-            %input.btn.btn-success(type="submit" ng-click="submitResponse()" value="Send Me Info")
+            .form-group
+              %input.btn.btn-success(type="submit" ng-click="submitResponse()" value="Send Me Info")
 
 

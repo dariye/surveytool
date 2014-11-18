@@ -13,7 +13,7 @@ app.directive('resize', ['$window', function ($window) {
 
           scope.resizePageContainer = function () {
             return {
-              'height' : (newValue.h - 70) + 'px',
+              'height' : (newValue.h) + 'px',
               'width'  : newValue.w + 'px'
             }
           };

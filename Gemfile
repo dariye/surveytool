@@ -2,19 +2,18 @@ source 'https://rubygems.org'
 ruby '2.1.2'
 
 gem 'rails', '4.1.4'
-gem 'sass-rails', '~> 4.0.3'
-gem 'uglifier', '>= 1.3.0'
 
+
+gem 'sass-rails', '>= 3.2'
+gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
-
 gem 'spring',        group: :development
-
 gem 'angularjs-rails'
 gem 'bower-rails', '~> 0.8.3'
 gem 'angular-rails-templates'
 gem 'autoprefixer-rails'
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-sass', '~> 3.3.1'
 gem 'haml'
 gem "haml-rails"
 

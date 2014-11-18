@@ -17,11 +17,11 @@
             %ul.nav.navbar-nav.pull-right
               %li.blackshade-text WEDIDIT Self Service Demo
               %li{ :title => "Survey" }
-                %span.indicator(ng-click="goto('demo.one')" ng-class="{active:isActive('demo.one')}")
+                %span.indicator(ng-click="go('demo.one')" ng-class="{active:isActive('demo.one')}")
               %li{ :title => "Survey" }
-                %span.indicator(ng-click= "goto('demo.two')" ng-class="{active: isActive('demo.two')}")
+                %span.indicator(ng-click= "go('demo.two')" ng-class="{active: isActive('demo.two')}")
               %li{ :title => "Survey" }
-                %span.indicator(ng-click="goto('demo.three')" ng-class="{active: isActive('demo.three')}")
+                %span.indicator(ng-click="go('demo.three')" ng-class="{active: isActive('demo.three')}")
               %li{ :title => "Peer Campaign" }
                 %span.indicator(ng-click="go('demo.four')" ng-class="{active:isActive('demo.four')}")
               %li{ :title => "Mobile Fundraising" }
@@ -30,5 +30,5 @@
                 %span.indicator(ng-click="go('demo.six')" ng-class="{active:isActive('demo.six')}")
               %li{ :title => "Share" }
                 %span.indicator(ng-class="{active:isActive('demo.end')}")
-
-    = yield
+    #demo-page-container
+      = yield

@@ -34,41 +34,44 @@ app.controller('UserCtrl', ['$scope', '$location', 'User', 'Questions', '$rootSc
 
     $scope.submitResponse = function () {
 
+      $scope.$broadcast('show-errors-check-validity');
+      if ($scope.userForm.$valid) {
+        // save the user
+        var attr = {};
+        attr.firstname = $scope.firstname;
+        attr.lastname = $scope.lastname;
+        attr.email = $scope.email;
+
+        attr.response = $scope.responses;
+
+        // DEBUG
+        console.log(attr);
+
+        // var newUser = User.create(attr);
+
+        //$scope.users.push(newUser);
+
+        $rootScope.go('demo.end');
+      }
+
       // Form Validation
 
-      if (($scope.firstname === '') || ($scope.firstname === undefined)) {
-        if (($scope.email === '') || ($scope.email === undefined)) {
-          $scope.vEmail = true;
-        }
-        $scope.vFname = true;
-        return;
-      }
-      else if (($scope.email === '') || ($scope.email === undefined)) {
-        if (($scope.firstname === '') || ($scope.firstname === undefined)) {
-          $scope.vFname = true;
-        }
-        $scope.vEmail = true;
-        return;
-      }
-      else {
+      // if (($scope.firstname === '') || ($scope.firstname === undefined)) {
+      //   if (($scope.email === '') || ($scope.email === undefined)) {
+      //     $scope.vEmail = true;
+      //   }
+      //   $scope.vFirstname = true;
+      //   return;
+      // }
+      // if (($scope.email === '') || ($scope.email === undefined)) {
+      //   if (($scope.firstname === '') || ($scope.firstname === undefined)) {
+      //     $scope.vFirstname = true;
+      //   }
+      //   $scope.vEmail = true;
+      //   return;
+      // }
 
-      }
 
-      var attr = {};
-      attr.firstname = $scope.firstname;
-      attr.lastname = $scope.lastname;
-      attr.email = $scope.email;
-
-      attr.response = $scope.responses;
-
-      // DEBUG
-      console.log(attr);
-
-      var newUser = User.create(attr);
-
-      $scope.users.push(newUser);
-
-      $rootScope.go('demo.end');
     };
 
 
