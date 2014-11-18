@@ -3,6 +3,9 @@
 app.controller('UserCtrl', ['$scope', '$location', 'User', 'Questions', '$rootScope', 'responses','$state',
   function ($scope, $location, User, Questions, $rootScope, responses, $state) {
 
+    // Scope State
+    $scope.state = $state;
+
     // Pre-defined Questions
     $scope.questions = Questions;
 
@@ -24,7 +27,7 @@ app.controller('UserCtrl', ['$scope', '$location', 'User', 'Questions', '$rootSc
       $rootScope.go(state);
     };
 
-
+    // DEBUG
     console.log($scope.responses);
 
     $scope.users = User.all();
@@ -58,6 +61,7 @@ app.controller('UserCtrl', ['$scope', '$location', 'User', 'Questions', '$rootSc
 
       attr.response = $scope.responses;
 
+      // DEBUG
       console.log(attr);
 
       var newUser = User.create(attr);
