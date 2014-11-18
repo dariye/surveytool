@@ -47,9 +47,9 @@ app.controller('UserCtrl', ['$scope', '$location', 'User', 'Questions', '$rootSc
         // DEBUG
         console.log(attr);
 
-        // var newUser = User.create(attr);
+        var newUser = User.create(attr);
 
-        //$scope.users.push(newUser);
+        $scope.users.push(newUser);
 
         $rootScope.go('demo.end');
       }
