@@ -9,7 +9,7 @@ app.controller('NavigationCtrl', ['$scope', '$state', '$location', '$rootScope',
   };
 
   $scope.goto = function(state) {
-    if ($rootScope.progressTracker.indexOf(state) >= 0 && $rootScope.progressTracker.indexOf(state) <= Questions.length - 1 ) {
+    if (($rootScope.progressTracker.indexOf(state) >= 0 ) && ($rootScope.progressTracker.indexOf(state) <= Questions.length - 1)) {
       return;
     }
     else {

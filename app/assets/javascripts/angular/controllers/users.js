@@ -1,7 +1,10 @@
 'use strict';
 
-app.controller('UserCtrl', ['$scope', '$location', 'User', 'Questions', '$rootScope', 'responses','$state',
+app.controller('UserCtrl', ['$scope', '$location', 'User', 'Questions', '$rootScope', 'responses', '$state',
   function ($scope, $location, User, Questions, $rootScope, responses, $state) {
+
+    // Current state
+    $scope.state = $state;
 
     // Pre-defined Questions
     $scope.questions = Questions;
@@ -14,6 +17,7 @@ app.controller('UserCtrl', ['$scope', '$location', 'User', 'Questions', '$rootSc
     var qNo = $rootScope.counter;
 
     $scope.addResponse = function (state, answer) {
+
       $scope.responses.push({
         question: $scope.questions[qNo],
         answer: answer
@@ -24,7 +28,7 @@ app.controller('UserCtrl', ['$scope', '$location', 'User', 'Questions', '$rootSc
       $rootScope.go(state);
     };
 
-
+    // Debugging
     console.log($scope.responses);
 
     $scope.users = User.all();
@@ -32,7 +36,6 @@ app.controller('UserCtrl', ['$scope', '$location', 'User', 'Questions', '$rootSc
     $scope.submitResponse = function () {
 
       // Form Validation
-
       if (($scope.firstname === '') || ($scope.firstname === undefined)) {
         if (($scope.email === '') || ($scope.email === undefined)) {
           $scope.vEmail = true;
@@ -41,6 +44,7 @@ app.controller('UserCtrl', ['$scope', '$location', 'User', 'Questions', '$rootSc
         return;
       }
       else if (($scope.email === '') || ($scope.email === undefined)) {
+
         if (($scope.firstname === '') || ($scope.firstname === undefined)) {
           $scope.vFname = true;
         }
@@ -58,12 +62,12 @@ app.controller('UserCtrl', ['$scope', '$location', 'User', 'Questions', '$rootSc
 
       attr.response = $scope.responses;
 
+      // Debugging
       console.log(attr);
 
       var newUser = User.create(attr);
 
-      // $scope.users.push(newUser);
-
+      $scope.users.push(newUser);
       $rootScope.go('demo.end');
     };
 

@@ -19,6 +19,8 @@ gem 'haml'
 gem "haml-rails"
 
 gem 'bourbon'
+gem 'therubyracer', '~> 0.12.1'
+gem 'less-rails', '~> 2.6.0'
 
 # Customerio
 

@@ -72,6 +72,7 @@ app.run(['$rootScope', '$stateParams', '$state', '$location', '$window', '$timeo
 
     // Change routes
     $rootScope.go = function (state) {
+
       $state.go(state);
     };
 
