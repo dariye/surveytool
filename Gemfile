@@ -41,6 +41,9 @@ gem 'serialize-rails'
 gem 'nokogiri'
 gem 'premailer-rails'
 
+# Use rack-rewrite to allow use of HTML5 pushState.
+gem 'rack-rewrite'
+
 group :production do
   gem 'rails_12factor'
   gem 'pg'
@@ -60,4 +63,8 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'database_cleaner'
+  gem 'compass'
 end
