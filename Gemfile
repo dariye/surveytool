@@ -26,6 +26,15 @@ gem 'customerio', :git => 'https://github.com/customerio/customerio-ruby'
 # Figaro
 gem 'figaro'
 
+# Rails integration for AngularJS style CSRF protection
+gem 'angular_rails_csrf'
+
+# Token based authentication for Rails JSON APIs
+gem 'devise_token_auth'
+
+# Omniauth
+gem 'omniauth', '~> 1.2.2'
+
 #Serialize to json
 gem 'serialize-rails'
 

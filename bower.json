@@ -14,7 +14,8 @@
       "angular-social": "~0.1.1",
       "angular-scroll": "~0.6.2",
       "angular-ui-router": "latest",
-      "angular-bootstrap-show-errors": "latest"
+      "angular-bootstrap-show-errors": "latest",
+      "ng-token-auth": "latest"
       // "threex"      : "git@github.com:rharriso/threex.git",
       // "gsvpano.js"  : "https://github.com/rharriso/GSVPano.js/blob/master/src/GSVPano.js"
     }

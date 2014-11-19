@@ -7,5 +7,6 @@ var app = angular.module('SSDemoApp', [
   'ngSocial',
   'duScroll',
   'ui.bootstrap.showErrors',
+  'ng-token-auth',
   'templates'
 ]);
