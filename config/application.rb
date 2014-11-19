@@ -23,5 +23,9 @@ module Surveytool
     # config.assets.paths << Rails.root.join("lib","assets","bower_components","bootstrap-sass-official", "assets", "stylesheets")
     # config.assets.paths << Rails.root.join("lib","assets","bower_components","bootstrap-sass-official", "assets","fonts")
     config.assets.paths << Rails.root.join("lib","assets","angular-social")
+
+    config.generators do |g|
+        g.test_framework :rspec
+    end
   end
 end
