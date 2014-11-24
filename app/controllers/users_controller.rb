@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
+  before_filter :authenticate_admin!
   respond_to :json
+  #
 
   # def new
   #   @user = User.new
@@ -15,7 +17,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       respond_with @user
-      ProductOwnerMailer.prospect_email(@user).deliver
+      # ProductOwnerMailer.prospect_email(@user).deliver
     end
   end
 
