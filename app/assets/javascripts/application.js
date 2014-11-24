@@ -14,12 +14,16 @@
 //= require angular
 //= require angular-animate
 //= require angular-resource
+//= require angular-cookies
+//= require angular-sanitize
+//= require angular-touch
 //= require angular-route
 //= require angular-social
 //= require angular-ui-router
 //= require angular-scroll
 //= require angular-social
 //= require ng-token-auth
+//= require angular-cookie
 //= require angular-bootstrap-show-errors
 //= require angular-rails-templates
 //= require main.js

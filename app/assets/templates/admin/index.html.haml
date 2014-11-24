@@ -1,0 +1,35 @@
+.container
+  .row
+    .col-md-12
+      %ul.push-down.list-unstyled.list-inline
+        %li
+          %button.btn.btn-danger(ng-click="handleSignOutBtnClick()")
+            Sign out
+        %li
+          %button.btn.btn-default(ui-sref="signup")
+            + Admin Account
+      %h1.blackshade-text.text-center.push-down
+        Survey Responses
+      %div.table-responsive
+        %table.table.table-hover
+          %thead
+            %tr
+              %th Name
+              %th Email
+          %tbody(ng-repeat="user in users")
+            %tr(ng-click="showMore = !showMore")
+              %td
+                {{ user.firstname + ' ' + user.lastname }}
+              %td
+                {{ user.email }}
+
+            %tr(ng-show="showMore")
+              %td(colspan="2")
+                %ul
+                  %li(ng-repeat='response in user.response track by $index' class="list-unstyled")
+                    {{ response['question'] }}
+                    %strong
+                      {{ response['answer'] }}
+
+
+/ %a(href="" ng-click="deleteUser(user.id, $index)") Remove

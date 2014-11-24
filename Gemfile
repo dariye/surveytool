@@ -8,7 +8,7 @@ gem 'sass-rails', '>= 3.2'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
-gem 'spring',        group: :development
+gem 'spring', group: :development
 gem 'angularjs-rails'
 gem 'bower-rails', '~> 0.8.3'
 gem 'angular-rails-templates'
@@ -30,7 +30,10 @@ gem 'figaro'
 gem 'angular_rails_csrf'
 
 # Token based authentication for Rails JSON APIs
-gem 'devise_token_auth'
+# gem 'devise_token_auth'
+
+# Modified Gem
+gem 'devise_token_auth', git: 'https://github.com/jasonswett/devise_token_auth.git'
 
 # Omniauth
 gem 'omniauth', '~> 1.2.2'
@@ -41,6 +44,8 @@ gem 'serialize-rails'
 gem 'nokogiri'
 gem 'premailer-rails'
 
+gem 'yaml_db'
+
 # Use rack-rewrite to allow use of HTML5 pushState.
 gem 'rack-rewrite'
 
@@ -50,7 +55,7 @@ group :production do
 end
 
 group :development do
-  gem 'sqlite3'
+  gem 'mysql2'
   gem 'pry'
   gem 'pry-byebug'
   gem 'letter_opener_web', '~> 1.2.0'
@@ -62,9 +67,10 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', require: false
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
   gem 'compass'
+  gem 'faker'
 end
