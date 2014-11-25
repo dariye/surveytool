@@ -5,7 +5,7 @@
         .alert.alert-danger(role="alert" ng-show="error")
           {{ error }}
         %br/
-        %form(ng-submit="handleRegBtnClick()" role="form" ng-init="registrationForm = {}")
+        %form.text-center(ng-submit="handleRegBtnClick()" role="form" ng-init="registrationForm = {}")
           .form-group
             %input.form-control(type="email" name="email" id="email" ng-model="registrationForm.email" required="required" placeholder="Email")
           .form-group
@@ -15,6 +15,6 @@
             %input.form-control(type="password" name="password_confirmation" id="password_confirmation" ng-model="registrationForm.password_confirmation" required="required" placeholder="Password confirmation")
 
           .form-group
-            %button(type="submit" class="btn btn-primary btn-lg")
+            %button.btn.btn-auth.btn-reg(type="submit")
               Register
 

@@ -1,0 +1,15 @@
+/* Shrink */
+@import "../mixins";
+@mixin shrink {
+	display: inline-block;
+	@include prefixed(transition-duration, $defaultDuration);
+	@include prefixed(transition-property, transform);
+
+	@include hacks();
+
+	&:hover,
+	&:focus,
+	&:active {
+		@include prefixed(transform, scale(.9));
+	}
+}

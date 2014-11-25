@@ -36,14 +36,16 @@
         .col-md-7
           = image_tag "reach.png", :class => "img-responsive", :alt => "Exponential Reach"
   .demo-section.whitesmoke(ng-style="resizePageContainer()" resize)
-    .row.center-block.text-center
-      .row
-        %h1.demo-bold-txt.blackshade-text
-          Reach your goal with
-          %br/
-          the power of your network
-        %h4.blackshade-text Lorem.Fortibus.Dissensio.
-        %a.demo-btn.blackshade.white-text(ui-sref="demo.five") See out Mobile APP
+    .info.text-center
+      %h1.demo-bold-txt.blackshade-text
+        Reach your goal with
+        %br/
+        the power of your network
+      %h4.blackshade-text Lorem.Fortibus.Dissensio.
+    %p.text-center
+      %a(ui-sref="demo.five")
+        %button.btn.btn-rectangle.btn-blackshade
+          See out Mobile APP
 
 
 

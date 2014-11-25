@@ -24,13 +24,16 @@
   .demo-section.cyan(ng-style="resizePageContainer()" resize)
     .center-block.text-center
       %iframe(src="//player.vimeo.com/video/54294990" width="600" height="381" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
-      %p
-        %a{:href => "http://vimeo.com/54294990"} WeDidIt: Expert Crowdfunding Tools for Nonprofits
-        from
-        %a{:href => "http://vimeo.com/wediditnyc"} WeDidIt
-        on
-        %a{:href => "https://vimeo.com"} Vimeo
-      %a.demo-btn.whitesmoke.blue-text(ui-sref="demo.six") Show Me a Donation Page
+    .info.text-center
+      %a{:href => "http://vimeo.com/54294990"}
+        WeDidIt: Expert Crowdfunding Tools for Nonprofits from
+      %a{:href => "http://vimeo.com/wediditnyc"}
+        WeDidIt on
+      %a{:href => "https://vimeo.com"} Vimeo
+    %p.text-center
+      %a(ui-sref="demo.six")
+        %button.btn.btn-rectangle.btn-blackshade
+          Show  Me a Donation Page
 
 
 

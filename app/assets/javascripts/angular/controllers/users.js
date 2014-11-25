@@ -6,6 +6,8 @@ app.controller('UsersCtrl', ['$scope', '$location', 'User', 'Questions', '$rootS
     // Scope State
     $scope.state = $state;
 
+    $scope.questions = Questions;
+
     $scope.responses = responses.responses;
 
     $scope.answer = '';
