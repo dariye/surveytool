@@ -1,14 +1,15 @@
 .page.lighter-blue(ng-style="resizePageContainer()" resize)
-  .text-center
+  .info.text-center
     %h1.demo-bold-txt Let's Get Started.
     %h4(ng-model="questions")
       {{ questions[0] }}
-    %option-container(ng-init="answer")
-      %label.blackshade-text.round-btn.yellow(for="no"  ng-click="addResponse('demo.two','No')")
+  %p.text-center
+    %label(for="no"  ng-click="addResponse('demo.two','No')")
+      %button.btn.btn-round.btn-yellow
         No
       %input(type="radio" ng-model="answer" id="no" value="No" )
-
-      %label.white-text.round-btn.light-blue(for="yes" ng-click="addResponse('demo.two','Yes')")
+    %label(for="yes" ng-click="addResponse('demo.two','Yes')")
+      %button.btn.btn-round.btn-blue
         Yes
       %input(type="radio" ng-model="answer" id="yes" value="Yes")
 

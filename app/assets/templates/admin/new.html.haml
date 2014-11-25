@@ -5,11 +5,11 @@
         .alert.alert-danger(role="alert" ng-show="error")
           {{ error }}
         %br/
-        %form(ng-submit="handleLoginBtnClick()" role="form" ng-init="loginForm = {}")
+        %form.text-center(ng-submit="handleLoginBtnClick()" role="form" ng-init="loginForm = {}")
           .form-group
             %input.form-control(type="email" name="email" id="email" ng-model="loginForm.email" required="required" placeholder="Email")
           .form-group
             %input.form-control(type="password" name="password" id="password" ng-model="loginForm.password" required="required" placeholder="Password")
           .form-group
-            %button(type="submit" class="btn btn-primary btn-lg")
+            %button.btn.btn-auth.btn-signin(type="submit")
               Sign in

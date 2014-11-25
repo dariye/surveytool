@@ -1,14 +1,15 @@
 .page.whitesmoke
-  .text-center
-    %h1.blackshade-text.demo-bold-text Donating
+  .info.text-center
+    %h1.blackshade-text.demo-bold-txt Donating
     %h4.blackshade-text(ng-model="questions")
       {{ questions[1] }}
-    .option-container
-      %label.whiteshade-text.round-btn.white(for="no" ng-click="addResponse('demo.three','No')")
+  %p.text-center
+    %label(for="no" ng-click="addResponse('demo.three','No')")
+      %button.btn.btn-round.btn-white
         No
       %input(type="radio" id="no" ng-model="answer" value="No")
-
-      %label.white-text.round-btn.blue(for="yes" ng-click="addResponse('demo.three','Yes')")
+    %label(for="yes" ng-click="addResponse('demo.three','Yes')")
+      %button.btn.btn-round.btn-lighter-blue
         Yes
       %input(type="radio" id="yes" ng-model="answer" value="Yes")
 
