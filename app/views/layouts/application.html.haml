@@ -14,7 +14,7 @@
             %p.navbar-brand
               %a.demo-logo{:href => "/" }
           .collapse.navbar-collapse(ng-controller="NavigationCtrl")
-            %ul.nav.navbar-nav.pull-right
+            %ul.nav.navbar-nav.pull-right(ng-hide="isAdmin('admin.dashboard') || isAdmin('signin') || isAdmin('signup')")
               %li.blackshade-text WEDIDIT Self Service Demo
               %li{ :title => "Survey" }
                 %span.indicator(ng-click="go('demo.one')" ng-class="{active:isActive('demo.one')}")
@@ -22,12 +22,14 @@
                 %span.indicator(ng-click= "go('demo.two')" ng-class="{active: isActive('demo.two')}")
               %li{ :title => "Survey" }
                 %span.indicator(ng-click="go('demo.three')" ng-class="{active: isActive('demo.three')}")
+              %li{ :title => "Survey" }
+                %span.indicator(ng-click="go('demo.four')" ng-class="{active: isActive('demo.four')}")
               %li{ :title => "Peer Campaign" }
-                %span.indicator(ng-click="go('demo.four')" ng-class="{active:isActive('demo.four')}")
-              %li{ :title => "Mobile Fundraising" }
                 %span.indicator(ng-click="go('demo.five')" ng-class="{active:isActive('demo.five')}")
-              %li{ :title => "Donor Insights"}
+              %li{ :title => "Mobile Fundraising" }
                 %span.indicator(ng-click="go('demo.six')" ng-class="{active:isActive('demo.six')}")
+              %li{ :title => "Donor Insights"}
+                %span.indicator(ng-click="go('demo.seven')" ng-class="{active:isActive('demo.seven')}")
               %li{ :title => "Share" }
                 %span.indicator(ng-class="{active:isActive('demo.end')}")
     #demo-page-container

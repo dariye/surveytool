@@ -1,39 +1,54 @@
 .page
-  .demo-section.whitesmoke(ng-style="resizePageContainer()")
+  .demo-section.green(ng-style="resizePageContainer()" resize)
     .center-block.text-center
-      %span.icon-mobile.blue-text
-      %h1.demo-bold-txt.blackshade-text Your Pocket Fundraising Tool
-      %h4.blackshade-text
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque chaere, municipem potuimus facimus intellegere diuturnitatem meam erimus ignavia cognitionis momenti, placeat diligant theophrasti capti athenis populo videtis quas persius, detracto.
-  .demo-section.blue.section-pull-up(ng-style="resizePageContainer()" resize arrow)
+      %span.icon-chat
+      %h1
+        %span.demo-bold-txt(tooltip="a fundraise technique where a group of individuals collectively raise money from their own personal networks for an organization or cause.")
+          PEER To PEER
+        Fundraising
+      %h4 Scroll down to determine if Peer-to-peer fundraising will work for your organization.
+  .demo-section.whitesmoke.section-pull-up(ng-style="resizePageContainer()" resize arrow)
     %a.arrow-wrap.text-center(href="#section-2" id="section-2" du-smooth-scroll)
       %span.glyphicon.glyphicon-chevron-down.arrow
+
     .center-block.text-center
-      .col-md-5
-        = image_tag "mobile_white.png", :class => "img-responsive", :alt => "White Mobile"
-      .col-md-7
-        %h1.demo-bold-text Fundraise Anywere, At Anytime.
-        %h4 Lorem.Fortibus.Dissensio.
+      %h1.text-uppercase.blackshade-text.demo-bold-txt How it Works
+      %p
+        %h2.blackshade-text.margin-bottom(tooltip="a fundraise technique where a group of individuals collectively raise money from their own personal networks for an organization or cause.")
+          Peer to Peer
+      .row
+        .col-md-4.demo-border-right.inside-padding(style="height: 250px")
+          %h1.darken 1
+          %h2.text-uppercase.blue-text ENLIST YOUR SUPPORTERS
+          %p.blackshade-text Staff, volunteers and even past donors can help you fundraise in the peer-to-peer model.
+        .col-md-4.demo-border-right.inside-padding(style="height: 250px")
+          %h1.darken 2
+          %h2.text-uppercase.blue-text EMPOWER YOUR TEAM
+          %p.blackshade-text Encourage each member of your fundraising team to hit their individuals goals by providing them tools and templates to make fundraising easy.
+        .col-md-4.inside-padding(style="height: 250px")
+          %h1.darken 3
+          %h2.text-uppercase.blue-text ACQUIRE NEW DONORS
+          %p.blackshade-text Through personal fundraising pages, your P2P supporters will deliver you money and contact info of the donors they acquired.
+
+  .demo-section.blue(ng-style="resizePageContainer()" resize)
+    .row.center-block.text-center
+      .row
+        .col-md-5
+          %h1.demo-bold-txt Exponential Reach
+          %h4 What makes this process so powerful is its ability to expand your reach by having your supporters fundraise on your behalf. Imagine the possibilities if each of your supporters set a personal goal of $500, $1000 or more.
+        .col-md-7
+          = image_tag "reach.png", :class => "img-responsive", :alt => "Exponential Reach"
   .demo-section.whitesmoke(ng-style="resizePageContainer()" resize)
-    .center-block.text-center
-      .col-md-7
-        = image_tag "mobile_black.png", :class => "img-responsive", :alt => "Black Mobile"
-      .col-md-5
-        %h2.demo-bold-txt.blue-text Quick Transactions
-        %h4.blackshade-text Lorem.Fortibus.Dissensio.
-  .demo-section.cyan(ng-style="resizePageContainer()" resize)
-    .center-block.text-center
-      %iframe(src="//player.vimeo.com/video/54294990" width="600" height="381" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
     .info.text-center
-      %a{:href => "http://vimeo.com/54294990"}
-        WeDidIt: Expert Crowdfunding Tools for Nonprofits from
-      %a{:href => "http://vimeo.com/wediditnyc"}
-        WeDidIt on
-      %a{:href => "https://vimeo.com"} Vimeo
+      %h1.demo-bold-txt.blackshade-text
+        RAISE MONEY ANYWHERE,
+        %br/
+        AT ANYTIME WITH WEDIDIT MOBILE
+      %h4.blackshade-text.margin-bottom Turn any smartphone into a powerful fundraising tool.
+      = image_tag "graphmobile.gif", :style => "margin: 10px 0 auto 200px", :class => "img-responsive", :alt => "Mobile Fundraising"
     %p.text-center
-      %a(ui-sref="demo.six")
-        %button.btn.btn-rectangle.btn-blackshade
-          Show  Me a Donation Page
+      %button.btn.btn-rectangle.btn-blackshade(ng-click="go('demo.six')")
+        SEE OUR MOBILE APP
 
 
 

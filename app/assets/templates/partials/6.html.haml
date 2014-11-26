@@ -1,55 +1,47 @@
 .page
-  .demo-section.blue(ng-style="resizePageContainer()" resize)
+  .demo-section.whitesmoke(ng-style="resizePageContainer()")
     .center-block.text-center
-      %span.icon-coin-bank
-      %h1
-        %span.demo-bold-txt WEDIDIT INSIGHTS
-        %br/
-        Increase Donations &
-        %br/
-        Decrease Spending
-      %h4
+      %span.icon-mobile.blue-text
+      %h1.demo-bold-txt.blackshade-text Your Pocket Fundraising Tool
+      %h4.blackshade-text
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque chaere, municipem potuimus facimus intellegere diuturnitatem meam erimus ignavia cognitionis momenti, placeat diligant theophrasti capti athenis populo videtis quas persius, detracto.
-  .demo-section.whitesmoke.section-pull-up(ng-style="resizePageContainer()" resize arrow)
+  .demo-section.blue.section-pull-up.mobile_fundraising(ng-style="resizePageContainer()" resize arrow)
     %a.arrow-wrap.text-center(href="#section-2" id="section-2" du-smooth-scroll)
       %span.glyphicon.glyphicon-chevron-down.arrow
-    .center-block.text-center
-      = image_tag "donorprospecting.png", :alt => "WEDIDIT Insights"
-  .demo-section.yellow(ng-style="resizePageContainer()" resize)
-    .center-block.text-center
-      .col-md-7
-        = image_tag "targetedreach.png", :class => "img-responsive", :alt => "Targeted Fundraising"
-      .col-md-5
-        %h1.demo-bold-txt Targeted Online Fundraising
+    .col-md-5.pull-right(style="margin-right: 165px")
+      .center-block.text-center(style="z-index: 1000")
+        %h1.demo-bold-text Fundraise Anywere, At Anytime.
         %h4 Lorem.Fortibus.Dissensio.
+
   .demo-section.whitesmoke(ng-style="resizePageContainer()" resize)
     .center-block.text-center
-      .col-md-8
-        = image_tag "donorpagesample.png", :class => "img-responsive", :alt => "Donor Page Insights"
-      .col-md-4
-        %h1.demo-bold-txt.blackshade-text
-          We'll Do The
-          %br/
-          Work For You
-        %h4.blackshade-text Lorem.Fortibus.Dissensio.
+      %h1.demo-bold-txt.blackshade-text.text-uppercase Quick Transactions
+      .row(style="margin-top: 50px")
+        .col-md-11.col-md-offset-1
+          .col-md-5
+            = image_tag "mobile_black.gif", :class => "img-responsive", :alt => "Black Mobile"
+          .col-md-6.text-left
+            %h2.demo-bold-txt.blue-text Quick Transactions
+            %h4.blackshade-text Lorem.Fortibus.Dissensio.
+  .demo-section.cyan(ng-style="resizePageContainer()" resize)
+    .center-block.text-center
+      %iframe(src="//player.vimeo.com/video/54294990" width="600" height="381" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+    .info.text-center
+      %a{:href => "http://vimeo.com/54294990"}
+        WeDidIt: Expert Crowdfunding Tools for Nonprofits from
+      %a{:href => "http://vimeo.com/wediditnyc"}
+        WeDidIt on
+      %a{:href => "https://vimeo.com"} Vimeo
+    %p.text-center
+      %a(ui-sref="demo.seven")
+        %button.btn.btn-rectangle.btn-whitesmoke.blue-text.text-uppercase
+          SHOW ME DONOR INSIGHTS
 
-      .col-md-6.col-md-offset-3
-        %p.text-center
-          %a(ng-click="optsIn = !optsIn" ng-show="!optsIn")
-            %button.btn.btn-rectangle.btn-blackshade
-              Send Me More Info
-        %div(ng-show="optsIn")
-          %form(name="userForm")
-            .form-group(show-errors="{ showSuccess: true }")
-              %input.form-control(type="text" placeholder="Enter First Name" name="firstname" ng-model="firstname" required)
-
-            .form-group(show-errors="{ showSuccess: true }")
-              %input.form-control(type="text" placeholder="Enter Last Name" name="name" ng-model="lastname")
-
-            .form-group(show-errors="{ showSuccess: true }")
-              %input.form-control(type="email" placeholder="Email" name="email" ng-model="email" required)
-
-            .form-group
-              %input.btn.btn-success(type="submit" ng-click="submitResponse()" value="Send Me Info")
+/ .center-block.text-center
+/   .col-md-5
+/     = image_tag "mobile_white.gif", :class => "img-responsive", :alt => "White Mobile"
+/   .col-md-7
+/     %h1.demo-bold-text Fundraise Anywere, At Anytime.
+/     %h4 Lorem.Fortibus.Dissensio.
 
 
