@@ -23,6 +23,7 @@
 //= require angular-scroll
 //= require angular-social
 //= require ng-token-auth
+//= require angular-bootstrap
 //= require angular-cookie
 //= require angular-bootstrap-show-errors
 //= require angular-rails-templates

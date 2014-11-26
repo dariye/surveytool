@@ -12,5 +12,6 @@ var app = angular.module('SSDemoApp', [
   'ui.bootstrap.showErrors',
   'ng-token-auth',
   'ipCookie',
+  'ui.bootstrap',
   'templates'
 ]);

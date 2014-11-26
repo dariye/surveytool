@@ -1,6 +1,6 @@
 .page.whitesmoke
   .info.text-center
-    %h1.blackshade-text.demo-bold-txt Donating
+    %h1.blackshade-text.demo-bold-txt Donor Insights
     %h4.blackshade-text(ng-model="questions")
       {{ questions[1] }}
   %p.text-center
@@ -12,6 +12,11 @@
       %button.btn.btn-round.btn-lighter-blue
         Yes
       %input(type="radio" id="yes" ng-model="answer" value="Yes")
+    %label(for="maybe" ng-click="addResponse('demo.three','Maybe')")
+      %button.btn.btn-round.btn-yellow
+        Maybe
+      %input(type="radio" id="maybe" ng-model="answer" value="Maybe")
+
 
 
 

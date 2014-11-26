@@ -1,0 +1,57 @@
+.page
+  .demo-section.blue(ng-style="resizePageContainer()" resize)
+    .center-block.text-center
+      %span.icon-coin-bank
+      %h1
+        %span.demo-bold-txt WEDIDIT INSIGHTS
+        %br/
+        Increase Donations &
+        %br/
+        Decrease Spending
+      %h4
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque chaere, municipem potuimus facimus intellegere diuturnitatem meam erimus ignavia cognitionis momenti, placeat diligant theophrasti capti athenis populo videtis quas persius, detracto.
+  .demo-section.whitesmoke.section-pull-up(ng-style="resizePageContainer()" style="padding-top: 6em"  resize arrow)
+    %a.arrow-wrap.text-center(href="#section-2" id="section-2" du-smooth-scroll)
+      %span.glyphicon.glyphicon-chevron-down.arrow
+    .center-block.text-center
+      = image_tag "donorprospecting.gif", :alt => "WEDIDIT Insights"
+  .demo-section.yellow(ng-style="resizePageContainer()" resize)
+    .center-block.text-center
+      .row
+        .col-md-11.col-md-offset-1
+          .col-md-7
+            = image_tag "targetedreach.gif", :class => "img-responsive", :alt => "Targeted Fundraising"
+          .col-md-5
+            %h1.demo-bold-txt Targeted Online Fundraising
+            %h4 Lorem.Fortibus.Dissensio.
+  .demo-section.whitesmoke(ng-style="resizePageContainer()" resize)
+    .center-block.text-center
+      .col-md-8
+        = image_tag "donorpagesample.png", :class => "img-responsive", :alt => "Donor Page Insights"
+      .col-md-4
+        %h1.demo-bold-txt.blackshade-text
+          We'll Do The
+          %br/
+          Work For You
+        %h4.blackshade-text Lorem.Fortibus.Dissensio.
+
+      .col-md-6.col-md-offset-3
+        %p.text-center
+          %a(ng-click="optsIn = !optsIn" ng-show="!optsIn")
+            %button.btn.btn-rectangle.btn-blackshade
+              Send Me More Info
+        %div(ng-show="optsIn")
+          %form(name="userForm")
+            .form-group(show-errors="{ showSuccess: true }")
+              %input.form-control(type="text" placeholder="Enter First Name" name="firstname" ng-model="firstname" required)
+
+            .form-group(show-errors="{ showSuccess: true }")
+              %input.form-control(type="text" placeholder="Enter Last Name" name="name" ng-model="lastname")
+
+            .form-group(show-errors="{ showSuccess: true }")
+              %input.form-control(type="email" placeholder="Email" name="email" ng-model="email" required)
+
+            .form-group
+              %input.btn.btn-success(type="submit" ng-click="submitResponse()" value="Send Me Info")
+
+

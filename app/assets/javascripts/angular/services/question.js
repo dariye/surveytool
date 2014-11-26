@@ -4,10 +4,12 @@ app.factory('Questions', [function () {
 
   var questionList =
   [
-    "Do you want to learn how our platform can help your fundraising campaign?",
-    "Lorem.Turpius.Praeterita. Turpius.Praeterita?",
-    "Lorem.Turpius.Praeterita. Turpius.Praeterita Praeterita?"
+    "Are you interested in seeing how WeDidIt helps organizations raise money in crowdfunding campaigns?",
+    "Would understanding your donors' presence on social media be valuable?",
+    "Would being able to segment your entire donor base or email list by income level be valuable?",
+    "Are you interested in seeing how Peer-to-peer fundraising can help your organization raise money?"
   ];
 
   return questionList;
 }]);
+

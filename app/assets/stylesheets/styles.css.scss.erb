@@ -154,6 +154,13 @@ this works for just chrome and safari
   display: table;
 }
 
+.mobile_fundraising {
+  background: url("<%= asset_path('mobilefundraising.gif') %>") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 
 // Buttons
@@ -163,13 +170,13 @@ this works for just chrome and safari
 .btn {
   border: none;
   font-family: 'GothamMedium', serif;
-  font-size: 1.8em;
+  font-size: 1.40em;
   color: inherit;
   background: none;
   cursor: pointer;
   padding: 25px 80px;
   display: inline-block;
-  margin: 15px 30px;
+  margin: 15px 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
@@ -343,6 +350,25 @@ this works for just chrome and safari
   }
   &:active {
     box-shadow: 0 0 darken($blackshade, 10%);
+    top: 6px;
+    color: #fff;
+  }
+}
+
+.btn-whitesmoke {
+  background: $whitesmoke;
+  color: #fff;
+  box-shadow: 0 6px darken($whitesmoke, 10%);
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+  &:hover {
+    box-shadow: 0 4px darken($whitesmoke, 10%);
+    top: 2px;
+    color: #fff;
+  }
+  &:active {
+    box-shadow: 0 0 darken($whitesmoke, 10%);
     top: 6px;
     color: #fff;
   }
@@ -531,7 +557,7 @@ input[type=radio] {
 
 // Bold
 .demo-bold-txt {
-  font-family: 'GothamBold';
+  font-family: 'GothamBold', serif;
 }
 
 // Spacing
@@ -540,7 +566,22 @@ input[type=radio] {
 }
 
 .push-down {
-  margin-top:100px !important;
+  margin-top: 100px !important;
+}
+
+.margin-bottom {
+  margin-bottom: 60px;
+}
+
+.inside-padding {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+// Color
+
+.darken {
+  color: darken(#ccc, 15%);
 }
 
 

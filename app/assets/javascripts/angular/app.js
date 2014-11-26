@@ -68,6 +68,11 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
           templateUrl: 'partials/6.html',
           controller: 'UsersCtrl'
         })
+        .state('demo.seven', {
+          url: '',
+          templateUrl: 'partials/7.html',
+          controller: 'UsersCtrl'
+        })
         .state('demo.end', {
           url: '',
           templateUrl: 'partials/end.html',
@@ -108,8 +113,8 @@ app.run(['$rootScope', '$stateParams', '$state', '$location', '$window', '$timeo
     //http://codepen.io/mike360/pen/xjFIJ
     $rootScope.$on('$routeChangeSuccess', function () {
       $timeout(function () {
-        $window.scrollTo(0,0);
-      }, 1000);
+        $window.scrollTo(0,0).$apply();
+      }, 500);
     });
 
     // Global counter

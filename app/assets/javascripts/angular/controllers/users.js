@@ -26,6 +26,8 @@ app.controller('UsersCtrl', ['$scope', '$location', 'User', 'Questions', '$rootS
       $rootScope.go(state);
     };
 
+    // console.log($scope.responses);
+
 
     $scope.submitResponse = function () {
 
