@@ -16,7 +16,7 @@ feature 'Authentication', js: true do
   feature 'login' do
     scenario 'with valid inputs' do
       @login_page.log_in(@admin.email, @admin.password)
-      expect(page).to have_content('Sign out')
+      expect(page).to have_content('SIGN OUT')
     end
 
     scenario 'with invalid credentials' do

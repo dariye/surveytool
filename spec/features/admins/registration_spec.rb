@@ -23,15 +23,19 @@ feature 'Registration', js: true do
     before { @registration_page.complete_form(email: email, password: password) }
 
     scenario 'account creation' do
-      click_button 'Sign out'
+
+      # click_button 'SIGN OUT'
+      find("button", text: "SIGN OUT").click
+
       visit '/sign_in'
       login_page = LoginPage.new
       login_page.log_in(email, password)
-      expect(page).to have_content('Sign out')
+
+      expect(page).to have_content('SIGN OUT')
     end
 
     scenario 'sign-in upon account creation' do
-      expect(page).to have_content('Sign out')
+      expect(page).to have_content('SIGN OUT')
     end
   end
 
@@ -42,7 +46,7 @@ feature 'Registration', js: true do
     end
 
     scenario "without Admin sign in" do
-      expect(page).to_not have_content("Sign in")
+      expect(page).to_not have_content("SIGN IN")
     end
 
   end

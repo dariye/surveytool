@@ -38,9 +38,9 @@ ActiveRecord::Schema.define(version: 20141119190629) do
     t.datetime "updated_at"
   end
 
-  add_index "admins", ["email"], name: "index_admins_on_email"
-  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
-  add_index "admins", ["uid", "provider"], name: "index_admins_on_uid_and_provider", unique: true
+  add_index "admins", ["email"], name: "index_admins_on_email", using: :btree
+  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
+  add_index "admins", ["uid", "provider"], name: "index_admins_on_uid_and_provider", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "firstname"

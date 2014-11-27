@@ -110,11 +110,20 @@ app.run(['$rootScope', '$stateParams', '$state', '$location', '$window', '$timeo
     //   $state.go('signin');
     // });
 
-    //http://codepen.io/mike360/pen/xjFIJ
+    // http://codepen.io/mike360/pen/xjFIJ
     $rootScope.$on('$routeChangeSuccess', function () {
       $timeout(function () {
-        $window.scrollTo(0,0).$apply();
-      }, 500);
+        $window.scrollTo(0,0);
+        $rootScope.$apply();
+      }, 0);
+    });
+
+    $rootScope.$on('$stateChangeStart',
+      function(){
+        $timeout(function () {
+          $window.scrollTo(0,0)
+          $rootScope.$apply();
+        }, 200);
     });
 
     // Global counter
