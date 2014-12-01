@@ -17,7 +17,9 @@
       "angular-bootstrap-show-errors": "latest",
       "ng-token-auth": "latest",
       "angular-cookie": "latest",
-      "angular-bootstrap": "latest"
+      "angular-bootstrap": "latest",
+      "angulartics": "https://github.com/luisfarzati/angulartics.git",
+      "angular-google-analytics": "latest"
       // "threex"      : "git@github.com:rharriso/threex.git",
       // "gsvpano.js"  : "https://github.com/rharriso/GSVPano.js/blob/master/src/GSVPano.js"
     }

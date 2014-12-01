@@ -1,6 +1,6 @@
 {
   "name": "angular-bootstrap-show-errors",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "authors": [
     "Paul Yoder <paulyoder@gmail.com>"
   ],
@@ -26,11 +26,11 @@
   "devDependencies": {
     "angular-mocks": "~1.x"
   },
-  "_release": "2.0.0",
+  "_release": "2.1.0",
   "_resolution": {
     "type": "version",
-    "tag": "v2.0.0",
-    "commit": "70c5adcb667cc9a8aec64ea87e593c8f966f729f"
+    "tag": "v2.1.0",
+    "commit": "5911fca863cce94d566acce64935b6ae63b46024"
   },
   "_source": "git://github.com/paulyoder/angular-bootstrap-show-errors.git",
   "_target": "*",
