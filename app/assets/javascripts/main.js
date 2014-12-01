@@ -13,5 +13,7 @@ var app = angular.module('SSDemoApp', [
   'ng-token-auth',
   'ipCookie',
   'ui.bootstrap',
+  'angulartics',
+  'angular-google-analytics',
   'templates'
 ]);

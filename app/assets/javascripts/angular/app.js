@@ -1,7 +1,7 @@
 'use strict';
 
-app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
-  function ($stateProvider, $urlRouterProvider, $locationProvider) {
+app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 'AnalyticsProvider',
+  function ($stateProvider, $urlRouterProvider, $locationProvider, AnalyticsProvider) {
     $stateProvider
       .state('signin', {
         url: '/sign_in',
@@ -86,11 +86,33 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
 
       // enable HTML5 Mode for SEO
       $locationProvider.html5Mode(true);
+
+
+      // https://github.com/luisfarzati/angulartics
+      // https://github.com/revolunet/angular-google-analytics
+
+
+      // Anaytics
+      AnalyticsProvider.setAccount('UA-28227468-4');
+      // Use display features plugin
+      AnalyticsProvider.useDisplayFeatures(true);
+      // track all routes (or not)
+      AnalyticsProvider.trackPages(true);
+      // Use analytics.js instead of ga.js
+      AnalyticsProvider.useAnalytics(true);
+      // Ignore first page view... helpful when using hashes and whenever your bounce rate looks obscenely low.
+      AnalyticsProvider.ignoreFirstPageLoad(true);
+      // change page event name
+      AnalyticsProvider.setPageEvent('$stateChangeSuccess');
+      // Enable enhanced link attribution module for analytics.js or ga.js
+      AnalyticsProvider.useEnhancedLinkAttribution(true);
 }]);
 
 
-app.run(['$rootScope', '$stateParams', '$state', '$location', '$window', '$timeout', 'Questions',
-  function ($rootScope, $stateParams, $state, $location, $window, $timeout, Questions) {
+app.run(['$rootScope', '$stateParams', '$state', '$location', '$window', '$timeout', 'Questions', 'Analytics',
+  function ($rootScope, $stateParams, $state, $location, $window, $timeout, Questions, Analytics) {
+    //analytics
+    Analytics.pageView();
 
     $rootScope.$on('auth:login-success', function() {
       $state.go('admin.dashboard');

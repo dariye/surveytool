@@ -27,6 +27,8 @@
 //= require angular-cookie
 //= require angular-bootstrap-show-errors
 //= require angular-rails-templates
+//= require angulartics
+//= require angular-google-analytics
 //= require main.js
 //= require_tree ./angular
 //= require_tree .
