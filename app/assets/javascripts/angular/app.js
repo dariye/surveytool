@@ -123,7 +123,7 @@ app.run(['$rootScope', '$stateParams', '$state', '$location', '$window', '$timeo
         $timeout(function () {
           $window.scrollTo(0,0)
           $rootScope.$apply();
-        }, 200);
+        }, 300);
     });
 
     // Global counter
