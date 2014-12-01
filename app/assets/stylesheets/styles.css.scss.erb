@@ -65,7 +65,7 @@ this works for just chrome and safari
   }
   ul {
     @include zero-bmo;
-    padding-right: 83px;
+    margin-right: 83px;
     list-style: none;
   }
   li {
@@ -75,6 +75,9 @@ this works for just chrome and safari
     padding-left: 3px;
     padding-right: 3px;
     padding-top: 21px;
+    &[title] {
+      width: 14px !important;
+    }
   }
 }
 
@@ -164,6 +167,10 @@ this works for just chrome and safari
 
 
 // Buttons
+
+button:focus, button:active {
+  outline: 0 !important;
+}
 
 //General buttons styles(resets)
 /* General button style (reset) */
