@@ -1,11 +1,13 @@
 .page
-  .demo-section.whitesmoke(ng-style="resizePageContainer()")
+  .demo-section.whitesmoke.padding-top(ng-style="resizePageContainer()")
     .center-block.text-center
       %span.icon-mobile.blue-text(style="font-size: 10em")
       %h1.demo-bold-txt.blackshade-text Your Pocket Fundraising Tool
       %h4.blackshade-text
-        Now you can empower anyone to collect donations for you with a secure mobile app. This is the ultimate power tool for taking donations in person.
-  .demo-section.blue.section-pull-up.mobile_fundraising(ng-style="resizePageContainer()" resize arrow)
+        Now you can empower anyone to collect donations for you with a secure mobile app.
+        %br/
+        This is the ultimate power tool for taking donations in person.
+  .demo-section.blue.section-pull-up.mobile_fundraising(ng-style="resizePageContainer()" resize)
     %a.arrow-wrap.text-center(href="#section-2" id="section-2" du-smooth-scroll)
       %span.glyphicon.glyphicon-chevron-down.arrow
     .col-md-5.pull-right(style="margin-right: 165px")
@@ -13,7 +15,9 @@
         %h1.demo-bold-text Fundraise Anywere, At Anytime.
         %h4 No hardware needed
 
-  .demo-section.whitesmoke(ng-style="resizePageContainer()" resize)
+  .demo-section.whitesmoke.section-pull-up(ng-style="resizePageContainer()" resize)
+    %a.arrow-wrap.text-center(href="#section-3" id="section-3" du-smooth-scroll)
+      %span.glyphicon.glyphicon-chevron-down.arrow
     .center-block.text-center
       %h1.demo-bold-txt.blackshade-text.text-uppercase Quick Transactions
       .row(style="margin-top: 50px")
@@ -23,7 +27,9 @@
           .col-md-6.text-left
             %h2.demo-bold-txt.blue-text Safe & Secure
             %h4.blackshade-text Accept donations anywhere by turning your smartphone camera into a credit card reader.
-  .demo-section.cyan(ng-style="resizePageContainer()" resize)
+  .demo-section.cyan.section-pull-up(ng-style="resizePageContainer()" resize)
+    %a.arrow-wrap.text-center(href="#section-4" id="section-4" du-smooth-scroll)
+      %span.glyphicon.glyphicon-chevron-down.arrow
     .center-block.text-center
       %iframe(src="//player.vimeo.com/video/54294990" width="600" height="381" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
     .info.text-center

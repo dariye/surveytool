@@ -1,13 +1,14 @@
 .page
-  .demo-section.green(ng-style="resizePageContainer()" resize)
+  .demo-section.green.padding-top(ng-style="resizePageContainer()" resize)
     .center-block.text-center
       %span.icon-chat
-      %h1
-        %span.demo-bold-txt(tooltip="a fundraise technique where a group of individuals collectively raise money from their own personal networks for an organization or cause.")
+      %h1(tooltip="a fundraise technique where a group of individuals collectively raise money from their own personal networks for an organization or cause.")
+        %span.demo-bold-txt
           PEER To PEER
         Fundraising
+        %span.icon-plus2.animated.inifinite.pulse(style="font-size: 0.69em; position: absolute")
       %h4 Scroll down to determine if Peer-to-peer fundraising will work for your organization.
-  .demo-section.whitesmoke.section-pull-up(ng-style="resizePageContainer()" resize arrow)
+  .demo-section.whitesmoke.section-pull-up(ng-style="resizePageContainer()" resize)
     %a.arrow-wrap.text-center(href="#section-2" id="section-2" du-smooth-scroll)
       %span.glyphicon.glyphicon-chevron-down.arrow
 
@@ -16,6 +17,7 @@
       %p
         %h2.blackshade-text.margin-bottom(tooltip="a fundraise technique where a group of individuals collectively raise money from their own personal networks for an organization or cause.")
           Peer to Peer
+          %span.icon-plus2.animated.inifinite.pulse(style="font-size: 0.69em; position: absolute")
       .row
         .col-md-4.demo-border-right.inside-padding(style="height: 250px")
           %h1.darken 1
@@ -30,7 +32,9 @@
           %h2.text-uppercase.blue-text ACQUIRE NEW DONORS
           %p.blackshade-text Through personal fundraising pages, your P2P supporters will deliver you money and contact info of the donors they acquired.
 
-  .demo-section.blue(ng-style="resizePageContainer()" resize)
+  .demo-section.blue.section-pull-up(ng-style="resizePageContainer()" resize)
+    %a.arrow-wrap.text-center(href="#section-3" id="section-3" du-smooth-scroll)
+      %span.glyphicon.glyphicon-chevron-down.arrow
     .row.center-block.text-center
       .row
         .col-md-5
@@ -38,7 +42,9 @@
           %h4 What makes this process so powerful is its ability to expand your reach by having your supporters fundraise on your behalf. Imagine the possibilities if each of your supporters set a personal goal of $500, $1000 or more.
         .col-md-7
           = image_tag "reach.png", :class => "img-responsive", :alt => "Exponential Reach"
-  .demo-section.whitesmoke(ng-style="resizePageContainer()" resize)
+  .demo-section.whitesmoke.section-pull-up(ng-style="resizePageContainer()" resize)
+    %a.arrow-wrap.text-center(href="#section-4" id="section-4" du-smooth-scroll)
+      %span.glyphicon.glyphicon-chevron-down.arrow
     .info.text-center
       %h1.demo-bold-txt.blackshade-text
         RAISE MONEY ANYWHERE,
